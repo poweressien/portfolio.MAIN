@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emmanuel Styles — Aka Road, Uyo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<style>
+:root{--navy:#0A0E1A;--navy2:#141929;--navy3:#1E2540;--gold:#D4A017;--goldl:#F0C842;--goldp:#FDF3D0;--terra:#C4622D;--teral:#E8845A;--cream:#FAF6EF;--tp:#0A0E1A;--tm:#6B7280;--tl:#9CA3AF;--r:14px;--sh:0 4px 24px rgba(10,14,26,.08);--shl:0 12px 48px rgba(10,14,26,.14);--sw:262px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--tp);overflow-x:hidden;}
+
+/* LANDING */
+#landing{display:flex;flex-direction:column;min-height:100vh;background:var(--navy);position:relative;overflow:hidden;}
+.abg{position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4A017'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3C/g%3E%3C/svg%3E");background-size:80px 80px;animation:pd 30s linear infinite;}
+@keyframes pd{from{background-position:0 0}to{background-position:160px 160px}}
+.ff{position:absolute;border-radius:50%;opacity:.1;animation:fu 12s ease-in-out infinite;}
+.ff1{width:300px;height:300px;background:var(--gold);top:-80px;right:-60px;}
+.ff2{width:180px;height:180px;background:var(--terra);bottom:10%;left:-40px;animation-delay:-4s;}
+.ff3{width:120px;height:120px;background:var(--gold);top:40%;right:15%;animation-delay:-8s;}
+@keyframes fu{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-28px) rotate(8deg)}}
+.lnav{position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:28px 60px;}
+.llogo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.lmark{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),var(--goldl));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;color:var(--navy);font-size:21px;}
+.ltxt{font-family:'Playfair Display',serif;color:var(--cream);font-size:19px;font-weight:700;}
+.ltxt span{color:var(--gold);}
+.ltxt small{display:block;font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.35);font-weight:400;letter-spacing:.05em;margin-top:1px;}
+.llinks{display:flex;gap:28px;align-items:center;}
+.llinks a{color:rgba(250,246,239,.65);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;cursor:pointer;}
+.llinks a:hover{color:var(--gold);}
+.lhero{position:relative;z-index:5;flex:1;display:flex;align-items:center;justify-content:center;padding:60px 60px 80px;text-align:center;}
+.lhero-inner{max-width:800px;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;justify-content:center;gap:12px;}
+.eyebrow::before,.eyebrow::after{content:'';display:inline-block;width:36px;height:1px;background:var(--gold);opacity:.45;}
+.lhero h1{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,86px);font-weight:900;color:var(--cream);line-height:1;margin-bottom:22px;}
+.lhero h1 em{color:var(--gold);font-style:italic;}
+.lhero p{font-size:17px;color:rgba(250,246,239,.62);line-height:1.72;max-width:540px;margin:0 auto 44px;}
+.ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btng{background:linear-gradient(135deg,var(--gold),var(--goldl));color:var(--navy);font-weight:700;font-size:14px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px rgba(212,160,23,.4);font-family:'Inter',sans-serif;}
+.btng:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(212,160,23,.5);}
+.btno{background:transparent;color:var(--cream);font-weight:600;font-size:14px;padding:13px 32px;border-radius:50px;border:1.5px solid rgba(250,246,239,.28);cursor:pointer;display:inline-flex;align-items:center;gap:9px;transition:all .2s;font-family:'Inter',sans-serif;}
+.btno:hover{border-color:var(--gold);color:var(--gold);}
+.lfeats{position:relative;z-index:5;display:flex;background:rgba(255,255,255,.04);border-top:1px solid rgba(212,160,23,.14);}
+.lfeat{flex:1;padding:24px 20px;display:flex;align-items:center;gap:12px;border-right:1px solid rgba(212,160,23,.09);}
+.lfeat:last-child{border-right:none;}
+.lfeat-ico{width:38px;height:38px;background:rgba(212,160,23,.11);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:15px;flex-shrink:0;}
+.lfeat strong{color:var(--cream);font-size:12px;font-weight:600;display:block;}
+.lfeat span{color:rgba(250,246,239,.45);font-size:11px;}
+
+/* AUTH MODAL */
+.overlay{position:fixed;inset:0;background:rgba(10,14,26,.87);backdrop-filter:blur(8px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .28s;}
+.overlay.on{opacity:1;pointer-events:all;}
+.abox{background:var(--cream);border-radius:22px;padding:42px;width:100%;max-width:430px;position:relative;transform:translateY(18px);transition:transform .28s;}
+.overlay.on .abox{transform:translateY(0);}
+.xbtn{position:absolute;top:18px;right:18px;background:none;border:none;color:var(--tm);cursor:pointer;font-size:19px;padding:4px;}
+.auth-logo{text-align:center;margin-bottom:26px;}
+.auth-mark{width:50px;height:50px;background:linear-gradient(135deg,var(--gold),var(--goldl));border-radius:13px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;color:var(--navy);font-size:23px;margin:0 auto 11px;}
+.abox h2{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;text-align:center;margin-bottom:5px;}
+.asub{color:var(--tm);font-size:13px;text-align:center;margin-bottom:26px;}
+.roles{display:flex;gap:9px;margin-bottom:22px;}
+.rbtn{flex:1;padding:11px 7px;border:2px solid rgba(212,160,23,.2);border-radius:11px;background:white;cursor:pointer;text-align:center;transition:all .18s;font-size:12px;font-weight:500;color:var(--tm);}
+.rbtn.on{border-color:var(--gold);background:var(--goldp);color:var(--navy);}
+.rbtn i{display:block;font-size:17px;margin-bottom:5px;color:var(--gold);}
+.gbtn{width:100%;padding:13px;border:2px solid rgba(10,14,26,.11);border-radius:13px;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:11px;font-size:14px;font-weight:600;color:var(--tp);transition:all .2s;box-shadow:var(--sh);font-family:'Inter',sans-serif;}
+.gbtn:hover{border-color:var(--gold);transform:translateY(-1px);}
+.adiv{text-align:center;color:var(--tl);font-size:12px;margin:16px 0;position:relative;}
+.adiv::before,.adiv::after{content:'';position:absolute;top:50%;width:calc(50% - 26px);height:1px;background:rgba(10,14,26,.1);}
+.adiv::before{left:0;}.adiv::after{right:0;}
+.fg{margin-bottom:13px;}
+.fg label{display:block;font-size:12px;font-weight:600;margin-bottom:5px;}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 13px;border:1.5px solid rgba(10,14,26,.1);border-radius:10px;font-size:13px;font-family:'Inter',sans-serif;outline:none;transition:border-color .18s;background:white;color:var(--tp);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);}
+.fg textarea{resize:vertical;min-height:72px;}
+.asubmit{width:100%;padding:12px;background:var(--navy);color:white;border:none;border-radius:11px;font-size:14px;font-weight:600;cursor:pointer;transition:background .18s;margin-top:7px;font-family:'Inter',sans-serif;}
+.asubmit:hover{background:var(--navy3);}
+.atoggle{text-align:center;margin-top:16px;font-size:12px;color:var(--tm);}
+.atoggle a{color:var(--gold);font-weight:600;cursor:pointer;}
+
+/* MODAL SYSTEM */
+.mbox{background:white;border-radius:18px;width:100%;max-width:500px;position:relative;transform:translateY(18px);transition:transform .28s;max-height:90vh;overflow-y:auto;}
+.overlay.on .mbox{transform:translateY(0);}
+.mhdr{padding:20px 26px;border-bottom:1px solid rgba(10,14,26,.07);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:white;z-index:2;border-radius:18px 18px 0 0;}
+.mhdr h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;}
+.mbody{padding:22px 26px;}
+.mfooter{padding:14px 26px 22px;display:flex;gap:9px;justify-content:flex-end;}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+.fr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;}
+
+/* APP */
+#app{display:none;min-height:100vh;flex-direction:row;}
+#app.on{display:flex;}
+
+/* SIDEBAR */
+.sb{width:var(--sw);background:var(--navy);color:white;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;overflow-y:auto;}
+.sb-logo{padding:22px 18px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06);}
+.sb-lmark{width:34px;height:34px;background:linear-gradient(135deg,var(--gold),var(--goldl));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;color:var(--navy);font-size:15px;flex-shrink:0;}
+.sb-ltxt{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;}
+.sb-ltxt span{color:var(--gold);}
+.sb-ltxt small{display:block;font-family:'Inter',sans-serif;font-size:9px;color:rgba(255,255,255,.32);font-weight:400;letter-spacing:.04em;margin-top:1px;}
+.sb-user{padding:13px 14px;display:flex;align-items:center;gap:9px;margin:9px 9px 3px;background:rgba(255,255,255,.05);border-radius:11px;}
+.sb-av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--terra),var(--teral));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;}
+.sb-uname{font-size:12px;font-weight:600;display:block;}
+.sb-urole{font-size:10px;color:rgba(255,255,255,.38);}
+.sb-badge{margin-left:auto;background:var(--gold);color:var(--navy);font-size:8px;font-weight:700;padding:2px 6px;border-radius:20px;letter-spacing:.04em;}
+.sb-sec{padding:13px 18px 6px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+.sbnav{padding:0 9px;flex:1;}
+.sbnav a{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;text-decoration:none;color:rgba(255,255,255,.55);font-size:12px;font-weight:500;margin-bottom:2px;transition:all .14s;cursor:pointer;}
+.sbnav a:hover{color:white;background:rgba(255,255,255,.06);}
+.sbnav a.on{color:white;background:rgba(212,160,23,.15);}
+.sbnav a.on i{color:var(--gold);}
+.sbnav a i{width:15px;text-align:center;font-size:13px;color:rgba(255,255,255,.38);transition:color .14s;}
+.sbnav a .nb{margin-left:auto;background:var(--terra);color:white;font-size:9px;font-weight:700;padding:1px 6px;border-radius:20px;}
+.sb-bot{padding:12px 9px;border-top:1px solid rgba(255,255,255,.06);}
+.sb-bot a{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;color:rgba(255,255,255,.45);font-size:12px;font-weight:500;margin-bottom:1px;transition:all .14s;cursor:pointer;}
+.sb-bot a:hover{color:white;background:rgba(255,255,255,.06);}
+.sb-bot a i{width:15px;text-align:center;font-size:13px;}
+.main{margin-left:var(--sw);flex:1;display:flex;flex-direction:column;min-height:100vh;}
+.topbar{background:white;padding:0 26px;height:62px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(10,14,26,.06);position:sticky;top:0;z-index:50;}
+.tb-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;}
+.tb-sub{font-size:11px;color:var(--tm);}
+.tb-r{display:flex;align-items:center;gap:9px;}
+.tsearch{display:flex;align-items:center;gap:7px;background:var(--cream);border:1.5px solid rgba(10,14,26,.08);border-radius:9px;padding:7px 12px;width:190px;}
+.tsearch input{background:none;border:none;outline:none;font-size:12px;font-family:'Inter',sans-serif;color:var(--tp);width:100%;}
+.tsearch i{color:var(--tm);font-size:12px;}
+.tact{width:36px;height:36px;border-radius:9px;background:var(--cream);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--tm);font-size:14px;transition:all .14s;position:relative;}
+.tact:hover{background:var(--goldp);color:var(--gold);}
+.tact .dot{position:absolute;top:7px;right:7px;width:6px;height:6px;background:var(--terra);border-radius:50%;border:2px solid white;}
+.content{padding:26px;flex:1;}
+.page{display:none;}
+.page.on{display:block;}
+
+/* PAGE HEADER */
+.ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;}
+.ph h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;}
+.ph p{font-size:12px;color:var(--tm);margin-top:3px;}
+.ph-btns{display:flex;gap:9px;}
+.btn1{background:var(--navy);color:white;padding:9px 18px;border-radius:9px;border:none;cursor:pointer;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:background .18s;font-family:'Inter',sans-serif;}
+.btn1:hover{background:var(--navy3);}
+.btn2{background:white;color:var(--tp);padding:8px 16px;border-radius:9px;border:1.5px solid rgba(10,14,26,.11);cursor:pointer;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all .18s;font-family:'Inter',sans-serif;}
+.btn2:hover{border-color:var(--gold);color:var(--gold);}
+.btnd{background:#FEF2F2;color:#DC2626;padding:8px 16px;border-radius:9px;border:1.5px solid rgba(220,38,38,.18);cursor:pointer;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:7px;font-family:'Inter',sans-serif;}
+.btnd:hover{background:#DC2626;color:white;}
+.card{background:white;border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;margin-bottom:18px;}
+.chdr{padding:16px 20px 0;display:flex;align-items:center;justify-content:space-between;}
+.ctitle{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;}
+.cact{font-size:11px;color:var(--gold);font-weight:600;cursor:pointer;background:none;border:none;display:flex;align-items:center;gap:4px;font-family:'Inter',sans-serif;}
+.cbody{padding:16px 20px 20px;}
+.frow{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;}
+.fc{padding:6px 14px;border-radius:20px;border:1.5px solid rgba(10,14,26,.09);background:white;font-size:11px;font-weight:500;cursor:pointer;transition:all .14s;color:var(--tm);}
+.fc.on{border-color:var(--gold);background:var(--goldp);color:var(--navy);font-weight:600;}
+
+/* STATS */
+.srow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px;}
+.scard{background:white;border-radius:var(--r);padding:18px;box-shadow:var(--sh);position:relative;overflow:hidden;}
+.scard .sacc{position:absolute;top:0;right:0;width:65px;height:65px;border-radius:50%;transform:translate(22px,-22px);}
+.sg .sacc{background:radial-gradient(circle,rgba(212,160,23,.14),transparent);}
+.st .sacc{background:radial-gradient(circle,rgba(196,98,45,.14),transparent);}
+.sn .sacc{background:radial-gradient(circle,rgba(10,14,26,.07),transparent);}
+.ss .sacc{background:radial-gradient(circle,rgba(76,175,80,.09),transparent);}
+.scard .sico{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:11px;}
+.sg .sico{background:var(--goldp);color:var(--gold);}
+.st .sico{background:rgba(196,98,45,.1);color:var(--terra);}
+.sn .sico{background:rgba(10,14,26,.06);color:var(--navy);}
+.ss .sico{background:rgba(76,175,80,.1);color:#4CAF50;}
+.slbl{font-size:10px;color:var(--tm);font-weight:500;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px;}
+.sval{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;line-height:1;margin-bottom:6px;}
+.sch{font-size:10px;color:var(--tm);display:flex;align-items:center;gap:3px;}
+.sup{color:#4CAF50;}
+
+/* TABLE */
+.dtbl{width:100%;border-collapse:collapse;}
+.dtbl th{text-align:left;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--tm);padding:9px 12px;background:var(--cream);}
+.dtbl td{padding:11px 12px;border-bottom:1px solid rgba(10,14,26,.05);font-size:12px;vertical-align:middle;}
+.dtbl tr:last-child td{border-bottom:none;}
+.dtbl tbody tr:hover td{background:rgba(212,160,23,.02);}
+.av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;color:white;}
+.cav{display:flex;align-items:center;gap:9px;}
+.sb2{padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap;}
+.sp{background:rgba(212,160,23,.11);color:#9A7200;}
+.si{background:rgba(59,130,246,.1);color:#1D4ED8;}
+.sf{background:rgba(139,92,246,.1);color:#6D28D9;}
+.sr{background:rgba(76,175,80,.1);color:#15803D;}
+.sd{background:rgba(10,14,26,.06);color:var(--tm);}
+.sv{background:rgba(212,160,23,.11);color:#9A7200;}
+.slow{background:rgba(196,98,45,.1);color:var(--terra);}
+.sstock{background:rgba(76,175,80,.1);color:#15803D;}
+.ib{background:none;border:none;cursor:pointer;color:var(--tm);font-size:13px;padding:4px 6px;border-radius:6px;transition:all .14s;}
+.ib:hover{background:var(--goldp);color:var(--gold);}
+.ib.del:hover{background:#FEF2F2;color:#DC2626;}
+
+/* LAYOUT GRIDS */
+.g21{display:grid;grid-template-columns:1fr 300px;gap:18px;}
+.g11{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+
+/* CHART */
+.chart{display:flex;align-items:flex-end;gap:5px;height:130px;padding:0 2px;}
+.cb{flex:1;border-radius:4px 4px 0 0;position:relative;cursor:pointer;transition:opacity .18s;min-height:3px;}
+.cb:hover{opacity:.82;}
+.cm{display:flex;gap:5px;padding:4px 2px 0;}
+.cm span{flex:1;text-align:center;font-size:9px;color:var(--tm);font-family:'DM Mono',monospace;}
+
+/* GALLERY */
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
+.gi{border-radius:13px;overflow:hidden;background:white;box-shadow:var(--sh);cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.gi:hover{transform:translateY(-4px);box-shadow:var(--shl);}
+.gimg{height:210px;position:relative;overflow:hidden;}
+.gthumb{width:100%;height:100%;transition:transform .4s;}
+.gi:hover .gthumb{transform:scale(1.05);}
+.gov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,14,26,.74),transparent);opacity:0;transition:opacity .28s;display:flex;align-items:flex-end;padding:12px;}
+.gi:hover .gov{opacity:1;}
+.gvbtn{background:var(--gold);color:var(--navy);padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:'Inter',sans-serif;}
+.gchip{position:absolute;top:9px;left:9px;background:rgba(10,14,26,.76);backdrop-filter:blur(5px);color:white;font-size:10px;font-weight:600;padding:3px 8px;border-radius:20px;}
+.gdel{position:absolute;top:9px;right:9px;background:rgba(220,38,38,.85);color:white;border:none;border-radius:7px;width:26px;height:26px;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;}
+.gi:hover .gdel{opacity:1;}
+.ginfo{padding:11px 13px;}
+.ginfo strong{font-size:12px;font-weight:700;display:block;margin-bottom:2px;}
+.ginfo span{font-size:11px;color:var(--tm);}
+.gfoot{display:flex;align-items:center;justify-content:space-between;margin-top:7px;}
+.ptag{font-family:'DM Mono',monospace;font-size:12px;color:var(--terra);}
+.p1{background:linear-gradient(135deg,#8B1A1A,#D4A017 40%,#1A3A8B);}
+.p2{background:repeating-linear-gradient(45deg,#D4A017,#D4A017 8px,#C4622D 8px,#C4622D 16px,#0A0E1A 16px,#0A0E1A 24px);}
+.p3{background:radial-gradient(circle at 40% 40%,#1A8B3A 35%,#D4A017 35%,#D4A017 52%,#0A0E1A 52%);background-size:42px 42px;}
+.p4{background:linear-gradient(0deg,#8B1A1A,#D4A017 50%,#1A8B3A);}
+.p5{background:repeating-linear-gradient(90deg,#C4622D 0,#C4622D 8px,#0A0E1A 8px,#0A0E1A 16px,#D4A017 16px,#D4A017 24px);}
+.p6{background:conic-gradient(from 0deg,#8B1A1A,#D4A017,#1A3A8B,#1A8B3A,#8B1A1A);}
+.p7{background:repeating-linear-gradient(135deg,#4B0082,#4B0082 10px,#D4A017 10px,#D4A017 20px,#8B1A1A 20px,#8B1A1A 30px);}
+.p8{background:radial-gradient(ellipse at 20% 80%,#D4A017 20%,transparent 20%),radial-gradient(ellipse at 80% 20%,#C4622D 20%,transparent 20%),#0A0E1A;}
+
+/* CLIENTS */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;}
+.ccard{background:white;border-radius:var(--r);padding:18px;box-shadow:var(--sh);}
+.ccop{display:flex;align-items:center;gap:11px;margin-bottom:13px;}
+.ccav{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0;color:white;}
+.ccname{font-weight:700;font-size:13px;}
+.ccph{font-size:10px;color:var(--tm);display:flex;align-items:center;gap:3px;margin-top:2px;}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;}
+.mc{background:var(--cream);border-radius:7px;padding:6px 9px;}
+.mc label{font-size:9px;font-weight:700;text-transform:uppercase;color:var(--tl);letter-spacing:.05em;display:block;margin-bottom:1px;}
+.mc span{font-family:'DM Mono',monospace;font-size:12px;color:var(--navy);}
+.ccbtns{display:flex;gap:6px;margin-top:11px;}
+.ccbtn{flex:1;padding:6px;border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:4px;font-family:'Inter',sans-serif;}
+.ccb1{background:var(--navy);color:white;}
+.ccb2{background:var(--cream);color:var(--tp);border:1.5px solid rgba(10,14,26,.09);}
+.ccb2:hover{border-color:var(--gold);color:var(--gold);}
+
+/* APPOINTMENTS */
+.apcard{display:flex;align-items:center;gap:13px;padding:13px 16px;background:white;border-radius:11px;box-shadow:var(--sh);margin-bottom:9px;}
+.aptbg{text-align:center;min-width:52px;}
+.aptbg strong{display:block;font-family:'DM Mono',monospace;font-size:13px;color:var(--navy);}
+.aptbg span{font-size:9px;color:var(--tm);text-transform:uppercase;letter-spacing:.04em;}
+.apvl{width:2px;height:38px;border-radius:1px;flex-shrink:0;}
+.apdet{flex:1;}
+.apdet strong{font-size:12px;font-weight:700;display:block;}
+.apdet span{font-size:11px;color:var(--tm);}
+.aptag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;display:inline-block;margin-top:3px;}
+.tfit{background:rgba(139,92,246,.1);color:#6D28D9;}
+.tmeas{background:rgba(212,160,23,.11);color:#9A7200;}
+.tpick{background:rgba(76,175,80,.1);color:#15803D;}
+.tcons{background:rgba(59,130,246,.1);color:#1D4ED8;}
+
+/* WORKERS */
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;}
+.wcard{background:white;border-radius:var(--r);padding:20px;box-shadow:var(--sh);text-align:center;}
+.wav{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;margin:0 auto 9px;color:white;}
+.wcard h4{font-size:13px;font-weight:700;margin-bottom:3px;}
+.wroletxt{font-size:11px;color:var(--tm);margin-bottom:11px;display:flex;align-items:center;justify-content:center;gap:5px;}
+.wstats{display:flex;justify-content:center;gap:18px;margin-bottom:11px;}
+.wsv strong{display:block;font-family:'DM Mono',monospace;font-size:16px;text-align:center;}
+.wsv span{font-size:10px;color:var(--tm);}
+.stags{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin-bottom:11px;}
+.stag{background:var(--goldp);color:#8B6800;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;}
+
+/* INVENTORY */
+.sbar{display:flex;align-items:center;gap:5px;}
+.sbt{width:65px;height:5px;background:rgba(10,14,26,.07);border-radius:3px;overflow:hidden;}
+.sbf{height:100%;border-radius:3px;}
+.sw{width:24px;height:24px;border-radius:5px;display:inline-block;vertical-align:middle;margin-right:7px;border:1px solid rgba(10,14,26,.07);}
+
+/* FINANCE */
+.fcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px;}
+.fcard{background:white;border-radius:var(--r);padding:18px;box-shadow:var(--sh);}
+.fcard label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--tm);display:block;margin-bottom:6px;}
+.famt{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;}
+.brow{display:flex;align-items:center;gap:9px;margin-bottom:10px;}
+.blbl{font-size:11px;min-width:120px;color:var(--tp);}
+.btr{flex:1;height:7px;background:rgba(10,14,26,.07);border-radius:4px;overflow:hidden;}
+.bfill{height:100%;border-radius:4px;}
+.bval{font-family:'DM Mono',monospace;font-size:10px;color:var(--tm);min-width:55px;text-align:right;}
+.txrow{display:flex;align-items:center;padding:11px 18px;border-bottom:1px solid rgba(10,14,26,.05);}
+.txrow:last-child{border-bottom:none;}
+.txi{flex:1;}
+.txi strong{font-size:12px;font-weight:600;display:block;}
+.txi span{font-size:11px;color:var(--tm);}
+.txamt{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;}
+.txin{color:#15803D;}.txout{color:var(--terra);}
+
+/* MESSAGES */
+.mlayout{display:grid;grid-template-columns:280px 1fr;background:white;border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;min-height:500px;}
+.mlist{border-right:1px solid rgba(10,14,26,.07);}
+.mlist-hdr{padding:14px 16px;border-bottom:1px solid rgba(10,14,26,.07);}
+.mlist-hdr h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;margin-bottom:7px;}
+.msrch{display:flex;align-items:center;gap:6px;background:var(--cream);border-radius:7px;padding:6px 10px;}
+.msrch input{background:none;border:none;outline:none;font-size:11px;font-family:'Inter',sans-serif;flex:1;}
+.mthr{padding:0;}
+.mti{display:flex;align-items:center;gap:9px;padding:11px 14px;cursor:pointer;border-bottom:1px solid rgba(10,14,26,.04);transition:background .14s;}
+.mti:hover,.mti.on{background:var(--goldp);}
+.mtav{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;color:white;}
+.mtnm{font-size:12px;font-weight:600;display:block;}
+.mtpr{font-size:11px;color:var(--tm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;}
+.mtmeta{text-align:right;flex-shrink:0;}
+.mttm{font-size:10px;color:var(--tl);}
+.mun{width:15px;height:15px;background:var(--terra);border-radius:50%;color:white;font-size:8px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:3px;margin-left:auto;}
+.mchat{display:flex;flex-direction:column;}
+.mchat-hdr{padding:13px 16px;border-bottom:1px solid rgba(10,14,26,.07);display:flex;align-items:center;gap:9px;}
+.mchat-hdr strong{font-size:13px;font-weight:700;}
+.mchat-hdr span{font-size:11px;color:var(--tm);}
+.mcbody{flex:1;padding:14px 16px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;min-height:280px;max-height:340px;}
+.bbl{max-width:70%;padding:9px 13px;border-radius:13px;font-size:12px;line-height:1.52;}
+.bin{background:var(--cream);align-self:flex-start;border-bottom-left-radius:3px;}
+.bout{background:var(--navy);color:white;align-self:flex-end;border-bottom-right-radius:3px;}
+.btm{font-size:9px;color:var(--tl);margin-top:2px;}
+.btmo{font-size:9px;color:rgba(255,255,255,.45);margin-top:2px;text-align:right;}
+.minput{padding:11px 14px;border-top:1px solid rgba(10,14,26,.07);display:flex;gap:7px;align-items:center;}
+.minput input{flex:1;padding:9px 13px;border:1.5px solid rgba(10,14,26,.1);border-radius:20px;font-size:12px;font-family:'Inter',sans-serif;outline:none;}
+.minput input:focus{border-color:var(--gold);}
+.msend{width:36px;height:36px;background:var(--navy);color:white;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:background .18s;}
+.msend:hover{background:var(--gold);color:var(--navy);}
+
+/* ACTIVITY */
+.ai{display:flex;gap:11px;padding:10px 0;border-bottom:1px solid rgba(10,14,26,.05);}
+.ai:last-child{border-bottom:none;}
+.aico{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;}
+.ai strong{font-size:12px;font-weight:600;display:block;margin-bottom:2px;}
+.ai span{font-size:10px;color:var(--tm);}
+.aitm{font-size:10px;color:var(--tl);margin-left:auto;white-space:nowrap;padding-top:2px;}
+
+/* APPT MINI */
+.ami{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(10,14,26,.05);}
+.ami:last-child{border-bottom:none;}
+.amitm{text-align:center;min-width:48px;}
+.amitm strong{display:block;font-family:'DM Mono',monospace;font-size:12px;color:var(--navy);}
+.amitm span{font-size:9px;color:var(--tm);text-transform:uppercase;}
+.amivl{width:2px;height:32px;border-radius:1px;flex-shrink:0;}
+.aminm strong{font-size:12px;font-weight:600;display:block;}
+.aminm span{font-size:11px;color:var(--tm);}
+
+/* FAB & TOAST */
+.fab{position:fixed;bottom:26px;right:26px;width:50px;height:50px;background:linear-gradient(135deg,var(--gold),var(--goldl));border-radius:50%;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(212,160,23,.44);display:flex;align-items:center;justify-content:center;font-size:19px;color:var(--navy);transition:transform .2s,box-shadow .2s;z-index:200;}
+.fab:hover{transform:scale(1.1);box-shadow:0 12px 32px rgba(212,160,23,.58);}
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);color:white;padding:11px 18px;border-radius:11px;font-size:12px;font-weight:500;z-index:9999;transition:transform .28s;display:flex;align-items:center;gap:9px;box-shadow:var(--shl);white-space:nowrap;}
+.toast.on{transform:translateX(-50%) translateY(0);}
+.tio{width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.empty{text-align:center;padding:50px 20px;color:var(--tm);}
+.empty i{font-size:36px;margin-bottom:12px;opacity:.28;}
+.empty p{font-size:13px;}
+.cm-body{text-align:center;padding:28px 24px;}
+.cm-body i{font-size:40px;color:var(--terra);margin-bottom:12px;}
+.cm-body h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin-bottom:6px;}
+.cm-body p{font-size:13px;color:var(--tm);}
+
+  #bnav{display:none;}
+  .bni{display:flex;flex-direction:column;align-items:center;gap:2px;color:rgba(255,255,255,.4);cursor:pointer;padding:5px 8px;border-radius:8px;background:none;border:none;font-family:'Inter',sans-serif;min-width:46px;}
+  .bni.on{color:var(--gold);}
+  .bni i{font-size:16px;}.bni span{font-size:9px;font-weight:600;}
+  .setBN-fn{}
+  @media(max-width:768px){
+    #bnav{display:flex!important;}
+    .main{margin-left:0!important;}
+    .sb{display:none!important;}
+    .ct{padding:12px 12px 70px;}
+    .tb{padding:0 14px;height:52px;}
+    .tbt{font-size:15px;}.tbs{display:none;}
+    .tsr{display:none;}
+    .fab{bottom:66px;right:14px;}
+    .ph{flex-direction:column;gap:9px;}
+    .phb{width:100%;}.phb .b1,.phb .b2{flex:1;justify-content:center;}
+    .srow{grid-template-columns:1fr 1fr!important;}
+    .g21,.g11,.g3{grid-template-columns:1fr!important;}
+    .fcards{grid-template-columns:1fr!important;}
+    .ggrid{grid-template-columns:repeat(2,1fr)!important;}
+    .cgrid{grid-template-columns:1fr!important;}
+    .wgrid{grid-template-columns:repeat(2,1fr)!important;}
+    .mlayout{grid-template-columns:1fr!important;}
+    .mlist{display:none!important;}
+    .ov{align-items:flex-end;}
+    .mbox,.abox{border-radius:16px 16px 0 0!important;max-width:100%!important;width:100%!important;max-height:92vh;}
+    .fr2{grid-template-columns:1fr!important;}
+    .fr3{grid-template-columns:1fr 1fr!important;}
+    .ob{flex-direction:column;padding:18px 16px;}
+    .obbtns{flex-direction:column;}
+    .obbtn{justify-content:center;}
+    .lnav{padding:18px 20px;}
+    .llinks{display:none;}
+    .lhero{padding:36px 20px 54px;}
+    .lhero h1{font-size:36px;}
+    .lbar{flex-direction:column;}
+    .lbf{border-right:none!important;border-bottom:1px solid rgba(212,160,23,.08);}
+    .dtbl{min-width:500px;}
+    .card{overflow-x:auto;}
+    .toast{white-space:normal;max-width:88vw;bottom:68px;}
+    #installBanner{bottom:66px;}
+  }
+  @media(min-width:769px) and (max-width:1100px){
+    .srow{grid-template-columns:repeat(2,1fr)!important;}
+    .g21{grid-template-columns:1fr!important;}
+    .fcards{grid-template-columns:1fr 1fr!important;}
+    .ggrid{grid-template-columns:repeat(3,1fr)!important;}
+  }
+  @media(hover:none){
+    .gov{opacity:1!important;}
+    .gdel{opacity:1!important;}
+    .gi:hover{transform:none;}
+  }
+  @supports(padding-bottom:env(safe-area-inset-bottom)){
+    #bnav{padding-bottom:env(safe-area-inset-bottom);height:calc(56px + env(safe-area-inset-bottom));}
+  }
+
+</style>
+</head>
+<body>
+
+<!-- LANDING -->
+<div id="landing">
+  <div class="abg"></div>
+  <div class="ff ff1"></div><div class="ff ff2"></div><div class="ff ff3"></div>
+  <nav class="lnav">
+    <a class="llogo" href="#"><div class="lmark">E</div><div class="ltxt">Emmanuel <span>Styles</span><small>UYO · AKA ROAD · EST. 2018</small></div></a>
+    <div class="llinks"><a>Gallery</a><a>Services</a><a>About</a><a onclick="openAuth('login')">Staff Login</a></div>
+  </nav>
+  <div class="lhero">
+    <div class="lhero-inner">
+      <div class="eyebrow">Uyo's Finest Tailor · Aka Road</div>
+      <h1>Crafting <em>Heritage</em><br>in Every <em>Stitch</em></h1>
+      <p>Bespoke Ankara, Aso-Oke & native wear tailored to perfection. From first measurement to final fitting — managed with care right here in Uyo.</p>
+      <div class="ctas">
+        <button class="btng" onclick="openAuth('signup')">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Join with Google
+        </button>
+        <button class="btno" onclick="login('owner')"><i class="fas fa-eye"></i> View Demo</button>
+      </div>
+    </div>
+  </div>
+  <div class="lfeats">
+    <div class="lfeat"><div class="lfeat-ico"><i class="fas fa-ruler"></i></div><div><strong>Measurements</strong><span>Store & recall</span></div></div>
+    <div class="lfeat"><div class="lfeat-ico"><i class="fas fa-images"></i></div><div><strong>Style Gallery</strong><span>Design showcase</span></div></div>
+    <div class="lfeat"><div class="lfeat-ico"><i class="fas fa-receipt"></i></div><div><strong>Order Tracking</strong><span>Cut to delivery</span></div></div>
+    <div class="lfeat"><div class="lfeat-ico"><i class="fas fa-users"></i></div><div><strong>Team</strong><span>Workers & apprentices</span></div></div>
+    <div class="lfeat"><div class="lfeat-ico"><i class="fas fa-naira-sign"></i></div><div><strong>Finance</strong><span>Revenue & payments</span></div></div>
+  </div>
+</div>
+
+<!-- AUTH -->
+<div class="overlay" id="authOverlay">
+  <div class="abox">
+    <button class="xbtn" onclick="closeOverlay('authOverlay')"><i class="fas fa-times"></i></button>
+    <div class="auth-logo"><div class="auth-mark">E</div><h2 id="atitle">Welcome Back</h2><p class="asub" id="asub">Sign in to Emmanuel Styles</p></div>
+    <div class="roles" id="roleRow">
+      <button class="rbtn on" onclick="selRole(this,'owner')"><i class="fas fa-crown"></i>Owner</button>
+      <button class="rbtn" onclick="selRole(this,'worker')"><i class="fas fa-scissors"></i>Worker</button>
+      <button class="rbtn" onclick="selRole(this,'apprentice')"><i class="fas fa-graduation-cap"></i>Apprentice</button>
+    </div>
+    <button class="gbtn" onclick="login(selR)">
+      <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      Continue with Google
+    </button>
+    <div class="adiv">or email</div>
+    <div class="fg"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+    <div class="fg" id="nameWrap" style="display:none"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+    <div class="fg"><label>Password</label><input type="password" placeholder="Password"></div>
+    <button class="asubmit" id="asubmit" onclick="login(selR)">Sign In</button>
+    <p class="atoggle" id="atog">No account? <a onclick="switchAuth()">Create one</a></p>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div class="overlay" id="orderModal">
+  <div class="mbox">
+    <div class="mhdr"><h3 id="omTitle">New Order</h3><button class="xbtn" onclick="closeOverlay('orderModal')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div class="fr2"><div class="fg"><label>Client Name *</label><input id="oC" placeholder="e.g. Ada Okon"></div><div class="fg"><label>Phone</label><input id="oP" placeholder="+234 ..."></div></div>
+      <div class="fr2"><div class="fg"><label>Style / Garment *</label><input id="oS" placeholder="e.g. Ankara Gown"></div><div class="fg"><label>Fabric</label><input id="oF" placeholder="e.g. Ankara, Lace"></div></div>
+      <div class="fr2"><div class="fg"><label>Amount (₦) *</label><input id="oA" type="number" placeholder="0"></div><div class="fg"><label>Deposit Paid (₦)</label><input id="oD" type="number" placeholder="0"></div></div>
+      <div class="fr2"><div class="fg"><label>Due Date</label><input id="oDt" type="date"></div><div class="fg"><label>Assigned To</label><select id="oW"></select></div></div>
+      <div class="fg"><label>Notes</label><textarea id="oN" placeholder="Special instructions..."></textarea></div>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('orderModal')">Cancel</button><button class="btn1" onclick="saveOrder()"><i class="fas fa-check"></i> Save</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="clientModal">
+  <div class="mbox">
+    <div class="mhdr"><h3 id="cmTitle">Add Client</h3><button class="xbtn" onclick="closeOverlay('clientModal')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div class="fr2"><div class="fg"><label>Full Name *</label><input id="cN" placeholder="e.g. Blessing Etuk"></div><div class="fg"><label>Phone *</label><input id="cP" placeholder="+234 ..."></div></div>
+      <div class="fr2"><div class="fg"><label>Email</label><input id="cE" type="email" placeholder="optional"></div><div class="fg"><label>Category</label><select id="cCt"><option>Regular</option><option>VIP</option><option>Bridal</option><option>Corporate</option></select></div></div>
+      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--tm);margin:14px 0 9px">Body Measurements</p>
+      <div class="fr3">
+        <div class="fg"><label>Bust</label><input id="mB" placeholder='38"'></div>
+        <div class="fg"><label>Waist</label><input id="mW" placeholder='30"'></div>
+        <div class="fg"><label>Hip</label><input id="mH" placeholder='40"'></div>
+        <div class="fg"><label>Height</label><input id="mHt" placeholder="5'6&quot;"></div>
+        <div class="fg"><label>Shoulder</label><input id="mSh" placeholder='15"'></div>
+        <div class="fg"><label>Sleeve</label><input id="mSl" placeholder='23"'></div>
+      </div>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('clientModal')">Cancel</button><button class="btn1" onclick="saveClient()"><i class="fas fa-check"></i> Save</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="apptModal">
+  <div class="mbox">
+    <div class="mhdr"><h3>Book Appointment</h3><button class="xbtn" onclick="closeOverlay('apptModal')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div class="fr2"><div class="fg"><label>Client Name *</label><input id="apC" placeholder="Client name"></div><div class="fg"><label>Phone</label><input id="apP" placeholder="+234 ..."></div></div>
+      <div class="fr2"><div class="fg"><label>Date *</label><input id="apDt" type="date"></div><div class="fg"><label>Time *</label><input id="apTm" type="time"></div></div>
+      <div class="fg"><label>Type</label><select id="apTy"><option>Fitting</option><option>Measurement</option><option>Pickup</option><option>Consultation</option></select></div>
+      <div class="fg"><label>Notes</label><textarea id="apN" placeholder="Details..."></textarea></div>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('apptModal')">Cancel</button><button class="btn1" onclick="saveAppt()"><i class="fas fa-check"></i> Book</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="workerModal">
+  <div class="mbox">
+    <div class="mhdr"><h3>Add Team Member</h3><button class="xbtn" onclick="closeOverlay('workerModal')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div class="fr2"><div class="fg"><label>Full Name *</label><input id="wN" placeholder="e.g. Uche Obi"></div><div class="fg"><label>Phone *</label><input id="wP" placeholder="+234 ..."></div></div>
+      <div class="fr2"><div class="fg"><label>Role</label><select id="wR"><option>Worker</option><option>Apprentice</option></select></div><div class="fg"><label>Speciality</label><input id="wSp" placeholder="e.g. Ankara, Bridal"></div></div>
+      <div class="fr2"><div class="fg"><label>Email (Google login)</label><input id="wE" type="email" placeholder="worker@email.com"></div><div class="fg"><label>Start Date</label><input id="wSt" type="date"></div></div>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('workerModal')">Cancel</button><button class="btn1" onclick="saveWorker()"><i class="fas fa-check"></i> Add</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="invModal">
+  <div class="mbox">
+    <div class="mhdr"><h3>Add Stock Item</h3><button class="xbtn" onclick="closeOverlay('invModal')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div class="fr2"><div class="fg"><label>Material Name *</label><input id="iN" placeholder="e.g. Red Ankara Wax"></div><div class="fg"><label>Type</label><select id="iTy"><option>Ankara</option><option>Aso-Oke</option><option>Lace</option><option>Adire</option><option>Silk</option><option>Cotton</option><option>Lining</option><option>Other</option></select></div></div>
+      <div class="fr2"><div class="fg"><label>Quantity *</label><input id="iQ" type="number" placeholder="0"></div><div class="fg"><label>Unit</label><select id="iU"><option>yards</option><option>pieces</option><option>meters</option><option>rolls</option></select></div></div>
+      <div class="fr2"><div class="fg"><label>Unit Price (₦)</label><input id="iP" type="number" placeholder="0"></div><div class="fg"><label>Supplier</label><input id="iSup" placeholder="e.g. Eke Market, Uyo"></div></div>
+      <div class="fg"><label>Colour</label><input id="iCol" type="color" value="#D4A017" style="height:40px;padding:4px 8px;border-radius:8px;border:1.5px solid rgba(10,14,26,.12);width:100%;cursor:pointer;"></div>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('invModal')">Cancel</button><button class="btn1" onclick="saveInv()"><i class="fas fa-check"></i> Add Stock</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="txModal">
+  <div class="mbox">
+    <div class="mhdr"><h3>Record Transaction</h3><button class="xbtn" onclick="closeOverlay('txModal')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div class="fg"><label>Type</label><div style="display:flex;gap:14px"><label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer"><input type="radio" name="txT" value="income" checked> Income</label><label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer"><input type="radio" name="txT" value="expense"> Expense</label></div></div>
+      <div class="fr2"><div class="fg"><label>Description *</label><input id="txD" placeholder="e.g. Payment from client"></div><div class="fg"><label>Amount (₦) *</label><input id="txA" type="number" placeholder="0"></div></div>
+      <div class="fr2"><div class="fg"><label>Category</label><select id="txC"><option>Order Payment</option><option>Deposit</option><option>Fabric Purchase</option><option>Worker Wages</option><option>Utilities</option><option>Other</option></select></div><div class="fg"><label>Date</label><input id="txDt" type="date"></div></div>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('txModal')">Cancel</button><button class="btn1" onclick="saveTx()"><i class="fas fa-check"></i> Record</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="galleryAddModal">
+  <div class="mbox">
+    <div class="mhdr"><h3>Add Design</h3><button class="xbtn" onclick="closeOverlay('galleryAddModal')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div class="fr2"><div class="fg"><label>Style Name *</label><input id="gN" placeholder="e.g. Ankara Peplum Gown"></div><div class="fg"><label>Category</label><select id="gCt"><option>Ankara</option><option>Aso-Oke</option><option>Adire</option><option>Kaftan</option><option>Bridal</option><option>Agbada</option><option>Senator</option><option>Accessories</option></select></div></div>
+      <div class="fr2"><div class="fg"><label>Price (₦) *</label><input id="gPr" type="number" placeholder="0"></div><div class="fg"><label>Occasion</label><input id="gOc" placeholder="e.g. Wedding, Owambe"></div></div>
+      <div class="fg"><label>Description</label><textarea id="gDs" placeholder="Brief description..."></textarea></div>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('galleryAddModal')">Cancel</button><button class="btn1" onclick="saveGallery()"><i class="fas fa-check"></i> Add Design</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="galleryView">
+  <div class="mbox" style="max-width:460px">
+    <div class="mhdr"><h3 id="gvName">Design</h3><button class="xbtn" onclick="closeOverlay('galleryView')"><i class="fas fa-times"></i></button></div>
+    <div class="mbody">
+      <div id="gvThumb" style="height:180px;border-radius:11px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(255,255,255,.28)"></div>
+      <div class="fr2">
+        <div><p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--tm)">Category</p><p id="gvCat" style="font-size:13px;font-weight:600;margin-top:3px"></p></div>
+        <div><p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--tm)">Price</p><p id="gvPrice" style="font-size:13px;font-family:'DM Mono',monospace;color:var(--terra);margin-top:3px"></p></div>
+      </div>
+      <p id="gvDesc" style="font-size:12px;color:var(--tm);margin-top:11px;line-height:1.6"></p>
+    </div>
+    <div class="mfooter"><button class="btn2" onclick="closeOverlay('galleryView')">Close</button><button class="btn1" onclick="orderFromDesign()"><i class="fas fa-receipt"></i> Create Order</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="confirmModal">
+  <div class="mbox" style="max-width:360px">
+    <div class="cm-body"><i class="fas fa-triangle-exclamation"></i><h4 id="cmTitle">Delete?</h4><p id="cmMsg">This cannot be undone.</p></div>
+    <div class="mfooter" style="justify-content:center;gap:11px;padding-bottom:24px"><button class="btn2" onclick="closeOverlay('confirmModal')">Cancel</button><button class="btnd" id="cmOk"><i class="fas fa-trash"></i> Delete</button></div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <aside class="sb">
+    <div class="sb-logo"><div class="sb-lmark">E</div><div class="sb-ltxt">Emmanuel <span>Styles</span><small>AKA ROAD · UYO</small></div></div>
+    <div class="sb-user"><div class="sb-av" id="sbAv">EE</div><div><span class="sb-uname" id="sbNm">Emmanuel Effiong</span><span class="sb-urole" id="sbRl">Owner · Uyo</span></div><div class="sb-badge" id="sbBg">OWNER</div></div>
+    <div class="sb-sec">Main</div>
+    <nav class="sbnav">
+      <a onclick="nav('dashboard',this)" class="on"><i class="fas fa-th-large"></i> Dashboard</a>
+      <a onclick="nav('orders',this)"><i class="fas fa-receipt"></i> Orders <span class="nb" id="nbO">0</span></a>
+      <a onclick="nav('gallery',this)"><i class="fas fa-images"></i> Style Gallery</a>
+      <a onclick="nav('clients',this)"><i class="fas fa-users"></i> Clients</a>
+      <a onclick="nav('appointments',this)"><i class="fas fa-calendar-check"></i> Appointments <span class="nb" id="nbA" style="display:none">0</span></a>
+    </nav>
+    <div class="sb-sec">Management</div>
+    <nav class="sbnav">
+      <a onclick="nav('workers',this)"><i class="fas fa-scissors"></i> Workers & Apprentices</a>
+      <a onclick="nav('inventory',this)"><i class="fas fa-boxes-stacked"></i> Fabric Inventory</a>
+      <a onclick="nav('finance',this)"><i class="fas fa-chart-line"></i> Finance</a>
+      <a onclick="nav('messages',this)"><i class="fas fa-comments"></i> Messages</a>
+    </nav>
+    <div class="sb-bot">
+      <a onclick="toast('Emmanuel Styles · Aka Road, Uyo · +234 803 000 0001')"><i class="fas fa-gear"></i> Settings</a>
+      <a onclick="doLogout()"><i class="fas fa-right-from-bracket"></i> Sign Out</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div><div class="tb-title" id="tbTitle">Dashboard</div><div class="tb-sub" id="tbSub">Emmanuel Styles · Aka Road, Uyo</div></div>
+      <div class="tb-r">
+        <div class="tsearch"><i class="fas fa-search"></i><input type="text" placeholder="Search orders, clients…" oninput="gSearch(this.value)"></div>
+        <button class="tact" onclick="nav('appointments',null)"><i class="fas fa-bell"></i><span class="dot" id="bellDot" style="display:none"></span></button>
+        <button class="tact" onclick="toast('Help: Aka Road, Uyo · +234 803 000 0001')"><i class="fas fa-circle-question"></i></button>
+      </div>
+    </div>
+    <div class="content">
+
+      <!-- DASHBOARD -->
+      <div class="page on" id="page-dashboard">
+        <!-- ONBOARDING CARD — hidden once shop has data -->
+        <div id="dashOnboard" style="display:none;margin-bottom:22px;">
+          <div style="background:linear-gradient(135deg,var(--navy),var(--navy3));border-radius:var(--r);padding:32px 36px;display:flex;align-items:center;gap:32px;position:relative;overflow:hidden;">
+            <div style="position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:rgba(212,160,23,.08)"></div>
+            <div style="position:absolute;right:60px;bottom:-40px;width:100px;height:100px;border-radius:50%;background:rgba(212,160,23,.05)"></div>
+            <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--gold),var(--goldl));border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:var(--navy);flex-shrink:0;">E</div>
+            <div style="flex:1;position:relative;z-index:1;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:white;margin-bottom:6px;">Welcome to Emmanuel Styles</h3>
+              <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:18px;">Your shop management system is ready. Start by adding your first client, creating an order, or uploading a design to your gallery.</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <button onclick="nav('clients',null);openClient()" style="background:var(--gold);color:var(--navy);border:none;padding:9px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:7px;"><i class="fas fa-user-plus"></i> Add First Client</button>
+                <button onclick="nav('orders',null);openOrder()" style="background:rgba(255,255,255,.1);color:white;border:1px solid rgba(255,255,255,.2);padding:9px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:7px;"><i class="fas fa-receipt"></i> Create Order</button>
+                <button onclick="nav('workers',null)" style="background:rgba(255,255,255,.1);color:white;border:1px solid rgba(255,255,255,.2);padding:9px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:7px;"><i class="fas fa-scissors"></i> Add Team Member</button>
+              </div>
+            </div>
+          </div>
+          <!-- Setup checklist -->
+          <div style="background:white;border-radius:var(--r);padding:20px 24px;box-shadow:var(--sh);margin-top:14px;">
+            <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tm);margin-bottom:14px;">Setup Checklist</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;" id="setupChecklist"></div>
+          </div>
+        </div>
+        <div class="srow" id="dStats"></div>
+        <div class="g21">
+          <div>
+            <div class="card"><div class="chdr"><span class="ctitle">Recent Orders</span><button class="cact" onclick="nav('orders',null)">View all <i class="fas fa-arrow-right"></i></button></div><div class="cbody" style="padding:0"><table class="dtbl"><thead><tr><th>Client</th><th>Style</th><th>Due</th><th>Amount</th><th>Status</th></tr></thead><tbody id="dOrd"></tbody></table></div></div>
+            <div class="card"><div class="chdr"><span class="ctitle">Revenue (6 months)</span><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--tm)" id="chartYr"></span></div><div class="cbody"><div class="chart" id="rChart"></div><div class="cm" id="rMonths"></div></div></div>
+          </div>
+          <div>
+            <div class="card"><div class="chdr"><span class="ctitle">Today's Schedule</span><button class="cact" onclick="nav('appointments',null)">All <i class="fas fa-arrow-right"></i></button></div><div class="cbody" id="dAppts" style="padding-top:12px"></div></div>
+            <div class="card"><div class="chdr"><span class="ctitle">Recent Activity</span></div><div class="cbody" id="dAct" style="padding-top:12px"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDERS -->
+      <div class="page" id="page-orders">
+        <div class="ph"><div><h2>Orders</h2><p id="ordSub">Track every garment from cut to delivery</p></div><div class="ph-btns"><button class="btn2" onclick="exportCSV('orders')"><i class="fas fa-download"></i> Export</button><button class="btn1" onclick="openOrder()"><i class="fas fa-plus"></i> New Order</button></div></div>
+        <div class="frow" id="ordFilters"></div>
+        <div class="card"><div class="cbody" style="padding:0"><table class="dtbl"><thead><tr><th>#</th><th>Client</th><th>Style</th><th>Assigned</th><th>Due</th><th>Total</th><th>Paid</th><th>Status</th><th></th></tr></thead><tbody id="ordBody"></tbody></table><div id="ordEmpty" class="empty" style="display:none"><i class="fas fa-receipt"></i><p>No orders yet. Create your first one.</p></div></div></div>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="page" id="page-gallery">
+        <div class="ph"><div><h2>Style Gallery</h2><p>Emmanuel Styles · Showcase your best work</p></div><button class="btn1" onclick="openOverlay('galleryAddModal')"><i class="fas fa-plus"></i> Add Design</button></div>
+        <div class="frow" id="galFilters"></div>
+        <div class="ggrid" id="galGrid"></div>
+        <div id="galEmpty" class="empty" style="display:none"><i class="fas fa-images"></i><p>No designs yet.</p></div>
+      </div>
+
+      <!-- CLIENTS -->
+      <div class="page" id="page-clients">
+        <div class="ph"><div><h2>Clients</h2><p id="clientSub">Measurements & profiles</p></div><button class="btn1" onclick="openClient()"><i class="fas fa-user-plus"></i> Add Client</button></div>
+        <div class="frow" id="clientFilters"></div>
+        <div class="cgrid" id="clientGrid"></div>
+        <div id="clientEmpty" class="empty" style="display:none"><i class="fas fa-users"></i><p>No clients yet.</p></div>
+      </div>
+
+      <!-- APPOINTMENTS -->
+      <div class="page" id="page-appointments">
+        <div class="ph"><div><h2>Appointments</h2><p id="apptSub">Fittings, measurements & pickups</p></div><button class="btn1" onclick="openOverlay('apptModal')"><i class="fas fa-plus"></i> Book</button></div>
+        <div class="g11">
+          <div>
+            <div class="frow" id="apptFilters"></div>
+            <div id="apptList"></div>
+            <div id="apptEmpty" class="empty" style="display:none"><i class="fas fa-calendar-check"></i><p>No appointments yet.</p></div>
+          </div>
+          <div>
+            <div class="card"><div class="chdr"><span class="ctitle">This Week</span></div><div class="cbody"><div style="display:flex;justify-content:space-around;text-align:center"><div><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold)" id="apSF">0</div><div style="font-size:10px;color:var(--tm)">Fittings</div></div><div style="width:1px;background:rgba(10,14,26,.07)"></div><div><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--terra)" id="apSM">0</div><div style="font-size:10px;color:var(--tm)">Measurements</div></div><div style="width:1px;background:rgba(10,14,26,.07)"></div><div><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#4CAF50" id="apSP">0</div><div style="font-size:10px;color:var(--tm)">Pickups</div></div></div></div></div>
+            <div class="card"><div class="chdr"><span class="ctitle">Quick Book</span></div><div class="cbody" style="display:grid;gap:7px">
+              <button class="btn1" style="justify-content:center" onclick="quickAppt('Fitting')"><i class="fas fa-shirt"></i> Book Fitting</button>
+              <button class="btn2" style="justify-content:center" onclick="quickAppt('Measurement')"><i class="fas fa-ruler-combined"></i> Schedule Measurement</button>
+              <button class="btn2" style="justify-content:center" onclick="quickAppt('Pickup')"><i class="fas fa-bag-shopping"></i> Schedule Pickup</button>
+              <button class="btn2" style="justify-content:center" onclick="quickAppt('Consultation')"><i class="fas fa-comments"></i> Consultation</button>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKERS -->
+      <div class="page" id="page-workers">
+        <div class="ph"><div><h2>Workers & Apprentices</h2><p id="workerSub">Manage your team</p></div><button class="btn1" onclick="openOverlay('workerModal')"><i class="fas fa-user-plus"></i> Add Member</button></div>
+        <div class="wgrid" id="workerGrid"></div>
+        <div id="workerEmpty" class="empty" style="display:none"><i class="fas fa-scissors"></i><p>No team members yet.</p></div>
+        <div class="card" style="margin-top:18px"><div class="chdr"><span class="ctitle">Google Invite Link</span></div><div class="cbody"><p style="font-size:12px;color:var(--tm);margin-bottom:13px">Share this link so workers and apprentices can join using their Google account.</p><div style="display:flex;gap:9px"><div style="flex:1;display:flex;align-items:center;gap:7px;background:var(--cream);border:1.5px solid rgba(10,14,26,.09);border-radius:9px;padding:10px 13px"><i class="fas fa-link" style="color:var(--tm)"></i><span style="font-size:11px;font-family:'DM Mono',monospace;color:var(--tm)">emmanuelstyles.ng/join?ref=UY2025</span></div><button class="btn1" onclick="toast('Invite link copied! Share with your team.')"><i class="fas fa-copy"></i> Copy</button><button class="btn2" onclick="toast('Opening WhatsApp...')"><i class="fab fa-whatsapp" style="color:#25D366"></i> Share</button></div></div></div>
+      </div>
+
+      <!-- INVENTORY -->
+      <div class="page" id="page-inventory">
+        <div class="ph"><div><h2>Fabric Inventory</h2><p id="invSub">Fabrics, materials & accessories</p></div><button class="btn1" onclick="openOverlay('invModal')"><i class="fas fa-plus"></i> Add Stock</button></div>
+        <div class="srow" style="grid-template-columns:repeat(3,1fr)" id="invStats"></div>
+        <div class="card"><div class="cbody" style="padding:0"><table class="dtbl"><thead><tr><th>Material</th><th>Type</th><th>Qty</th><th>Level</th><th>Unit Price</th><th>Supplier</th><th>Status</th><th></th></tr></thead><tbody id="invBody"></tbody></table><div id="invEmpty" class="empty" style="display:none"><i class="fas fa-boxes-stacked"></i><p>No stock items yet.</p></div></div></div>
+      </div>
+
+      <!-- FINANCE -->
+      <div class="page" id="page-finance">
+        <div class="ph"><div><h2>Finance</h2><p>Revenue, expenses & profit</p></div><div class="ph-btns"><button class="btn2" onclick="exportCSV('finance')"><i class="fas fa-file-export"></i> Export</button><button class="btn1" onclick="openOverlay('txModal')"><i class="fas fa-plus"></i> Add Transaction</button></div></div>
+        <div class="fcards" id="finCards"></div>
+        <div class="g11">
+          <div class="card"><div class="chdr"><span class="ctitle">Income Breakdown</span></div><div class="cbody" id="finBrk"></div></div>
+          <div class="card"><div class="chdr"><span class="ctitle">Transactions</span><button class="cact" onclick="clearAllTx()">Clear all</button></div><div class="cbody" style="padding:0" id="txList"></div><div id="txEmpty" class="empty" style="display:none;padding:24px"><i class="fas fa-naira-sign"></i><p>No transactions yet.</p></div></div>
+        </div>
+      </div>
+
+      <!-- MESSAGES -->
+      <div class="page" id="page-messages">
+        <div class="ph"><div><h2>Messages</h2><p>Client & team conversations</p></div><button class="btn1" onclick="newConv()"><i class="fas fa-pen-to-square"></i> New Message</button></div>
+        <div class="mlayout">
+          <div class="mlist">
+            <div class="mlist-hdr"><h4>Conversations</h4><div class="msrch"><i class="fas fa-search" style="color:var(--tm);font-size:11px"></i><input type="text" placeholder="Search..." oninput="filterConvs(this.value)"></div></div>
+            <div class="mthr" id="mThreads"></div>
+          </div>
+          <div class="mchat" id="mChat">
+            <div class="mchat-hdr"><div style="width:34px;height:34px;border-radius:50%;background:var(--goldp);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--gold)" id="chAv">?</div><div><strong id="chNm">Select a conversation</strong><span id="chRl"></span></div></div>
+            <div class="mcbody" id="chBody"><div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--tm);font-size:12px">Pick a conversation to start chatting</div></div>
+            <div class="minput"><input type="text" id="msgIn" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendMsg()"><button class="msend" onclick="sendMsg()"><i class="fas fa-paper-plane"></i></button></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <button class="fab" onclick="fabAct()"><i class="fas fa-plus"></i></button>
+</div>
+
+<div class="toast" id="toastEl"><div class="tio"><i id="toastIco" class="fas fa-check"></i></div><span id="toastTxt"></span></div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────
+const COLS=['#C4622D','#1A3A8B','#1A8B3A','#8B1A1A','#4B0082','#D4A017','#0A3A4A'];
+const PATS=['p1','p2','p3','p4','p5','p6','p7','p8'];
+let selR='owner', authM='login', activeThread=1, ordFlt='All', galFlt='All', cliFlt='All', apFlt='All', nid=20;
+
+const today=()=>new Date().toISOString().split('T')[0];
+const fmt=(n)=>(n||0).toLocaleString('en-NG');
+const fmtD=(d)=>{if(!d)return'—';const dt=new Date(d+'T12:00:00');return dt.toLocaleDateString('en-NG',{day:'numeric',month:'short'});}
+const fmtT=(t)=>{if(!t)return'';const[h,m]=t.split(':');const hr=parseInt(h);return(hr%12||12)+':'+m+(hr<12?'am':'pm');}
+const ini=(s)=>(s||'?').split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);
+const sc=(s)=>COLS[Math.abs((s||'').split('').reduce((a,b)=>a+b.charCodeAt(0),0))%COLS.length];
+const rel=(ts)=>{const d=Date.now()-ts,m=60000,h=3600000,dy=86400000;if(d<m)return'just now';if(d<h)return Math.floor(d/m)+'m ago';if(d<dy)return Math.floor(d/h)+'h ago';return Math.floor(d/dy)+'d ago';}
+const inMonth=(ds)=>{if(!ds)return false;const n=new Date();return ds.startsWith(n.getFullYear()+'-'+(n.getMonth()+1).toString().padStart(2,'0'));}
+const g=(id)=>document.getElementById(id);
+const v=(id)=>g(id)?.value?.trim()||'';
+const sv=(obj)=>Object.entries(obj).forEach(([k,val])=>{const el=g(k);if(el)el.value=val;});
+const clr=(...ids)=>ids.forEach(id=>{const el=g(id);if(el)el.value='';});
+const sbadge=(s)=>{const m={Pending:'sp','In Progress':'si',Fitting:'sf',Ready:'sr',Delivered:'sd'};return`<span class="sb2 ${m[s]||'sp'}">${s}</span>`;}
+const apCls=(t)=>({Fitting:'tfit',Measurement:'tmeas',Pickup:'tpick',Consultation:'tcons'}[t]||'tmeas');
+
+// ── SESSION STORAGE PERSISTENCE ──────────────────────────────
+// Data survives page refresh within the same browser session.
+// Replace sessionStorage with localStorage for permanent storage.
+function saveDB(){try{sessionStorage.setItem('es_db',JSON.stringify(db));}catch(e){}}
+function loadDB(){
+  try{
+    const raw=sessionStorage.getItem('es_db');
+    if(raw){const parsed=JSON.parse(raw);Object.assign(db,parsed);return true;}
+  }catch(e){}
+  return false;
+}
+
+let db = {
+  orders:[],
+  clients:[],
+  appointments:[],
+  workers:[],
+  inventory:[],
+  transactions:[],
+  gallery:[],
+  msgs:[],
+};
+
+// ── AUTH ──────────────────────────────────────────────────────
+function openAuth(m){authM=m;refreshAuth();openOverlay('authOverlay');}
+function switchAuth(){authM=authM==='login'?'signup':'login';refreshAuth();}
+function selRole(btn,r){document.querySelectorAll('.rbtn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');selR=r;}
+function refreshAuth(){
+  const l=authM==='login';
+  g('atitle').textContent=l?'Welcome Back':'Join Emmanuel Styles';
+  g('asub').textContent=l?'Sign in to your account':'Create your staff account';
+  g('asubmit').textContent=l?'Sign In':'Create Account';
+  g('atog').innerHTML=l?"No account? <a onclick='switchAuth()'>Create one</a>":"Have account? <a onclick='switchAuth()'>Sign in</a>";
+  g('nameWrap').style.display=l?'none':'block';
+}
+function login(role){
+  // Read name from form; fall back to role label only
+  const emailEl=document.querySelector('#authOverlay input[type="email"]');
+  const nameEl=document.querySelector('#authOverlay input[type="text"]');
+  const enteredName=(nameEl&&nameEl.value.trim())||'';
+  const roleDefault={owner:'Emmanuel Effiong',worker:'Staff Member',apprentice:'Apprentice'};
+  const name=enteredName||roleDefault[role]||'User';
+  const badge={owner:'OWNER',worker:'WORKER',apprentice:'APPR.'};
+  const sub={owner:'Owner · Aka Road, Uyo',worker:'Worker · Emmanuel Styles',apprentice:'Apprentice · Emmanuel Styles'};
+  const inits=name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);
+  g('sbAv').textContent=inits;
+  g('sbNm').textContent=name;
+  g('sbRl').textContent=sub[role]||'Staff · Emmanuel Styles';
+  g('sbBg').textContent=badge[role]||'STAFF';
+  closeOverlay('authOverlay');
+  g('landing').style.display='none';
+  g('app').className='on';
+  g('app').style.display='flex';
+  loadDB();
+  rAll();
+}
+function doLogout(){g('landing').style.display='flex';g('app').style.display='none';g('app').className='';toast('Signed out');}
+
+// ── OVERLAYS ──────────────────────────────────────────────────
+function openOverlay(id){g(id).classList.add('on');}
+function closeOverlay(id){g(id).classList.remove('on');}
+function confirm2(title,msg,cb){g('cmTitle').textContent=title;g('cmMsg').textContent=msg;g('cmOk').onclick=()=>{cb();closeOverlay('confirmModal');};openOverlay('confirmModal');}
+
+// ── NAV ───────────────────────────────────────────────────────
+const PM={dashboard:['Dashboard','Emmanuel Styles · Aka Road, Uyo'],orders:['Orders','Track every garment from cut to delivery'],gallery:['Style Gallery','Design portfolio'],clients:['Clients','Measurements & profiles'],appointments:['Appointments','Fittings, measurements & pickups'],workers:['Workers & Team','Staff and apprentices'],inventory:['Inventory','Fabrics & materials'],finance:['Finance','Revenue, expenses & profit'],messages:['Messages','Client & team conversations']};
+function nav(page,link){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  const pg=g('page-'+page);if(pg)pg.classList.add('on');
+  document.querySelectorAll('.sbnav a').forEach(a=>a.classList.remove('on'));
+  if(link)link.classList.add('on');
+  else document.querySelectorAll('.sbnav a').forEach(a=>{if(a.getAttribute('onclick')&&a.getAttribute('onclick').includes("'"+page+"'"))a.classList.add('on');});
+  const m=PM[page]||['Dashboard',''];
+  g('tbTitle').textContent=m[0];g('tbSub').textContent=m[1];
+  rPage(page);
+}
+function rAll(){updBadges();rPage('dashboard');}
+function rPage(p){
+  if(p==='dashboard')rDash();
+  else if(p==='orders')rOrders();
+  else if(p==='gallery')rGallery();
+  else if(p==='clients')rClients();
+  else if(p==='appointments')rAppts();
+  else if(p==='workers')rWorkers();
+  else if(p==='inventory')rInv();
+  else if(p==='finance')rFinance();
+  else if(p==='messages')rMsgs();
+}
+function updBadges(){
+  const active=db.orders.filter(o=>o.status!=='Delivered').length;
+  g('nbO').textContent=active;
+  const tAppts=db.appointments.filter(a=>a.date===today()).length;
+  const nb=g('nbA');if(tAppts>0){nb.textContent=tAppts;nb.style.display='flex';}else nb.style.display='none';
+  g('bellDot').style.display=tAppts>0?'block':'none';
+}
+
+// ── DASHBOARD ─────────────────────────────────────────────────
+function rDash(){
+  // Show onboarding banner when shop is freshly set up
+  const isEmpty=db.orders.length===0&&db.clients.length===0&&db.workers.length===0;
+  const onboard=g('dashOnboard');
+  if(onboard)onboard.style.display=isEmpty?'block':'none';
+  // Render setup checklist
+  const cl=g('setupChecklist');
+  if(cl){
+    const steps=[
+      {done:db.clients.length>0,label:'Add your first client',icon:'fa-users',action:"nav('clients',null);openClient()"},
+      {done:db.orders.length>0,label:'Create your first order',icon:'fa-receipt',action:"nav('orders',null);openOrder()"},
+      {done:db.workers.length>0,label:'Add a team member',icon:'fa-scissors',action:"nav('workers',null)"},
+      {done:db.inventory.length>0,label:'Log your fabric stock',icon:'fa-boxes-stacked',action:"nav('inventory',null)"},
+      {done:db.gallery.length>0,label:'Upload a design photo',icon:'fa-images',action:"nav('gallery',null)"},
+      {done:db.transactions.length>0,label:'Record first transaction',icon:'fa-naira-sign',action:"nav('finance',null)"},
+    ];
+    cl.innerHTML=steps.map(s=>`<div onclick="${s.action}" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:9px;border:1.5px solid ${s.done?'rgba(76,175,80,.2)':'rgba(10,14,26,.08)'};background:${s.done?'rgba(76,175,80,.04)':'white'};cursor:pointer;transition:all .15s;">
+      <div style="width:28px;height:28px;border-radius:7px;background:${s.done?'rgba(76,175,80,.12)':'rgba(10,14,26,.05)'};display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas ${s.done?'fa-check':''+s.icon}" style="font-size:12px;color:${s.done?'#15803D':'var(--tm)'}"></i></div>
+      <span style="font-size:12px;font-weight:${s.done?'500':'600'};color:${s.done?'#15803D':'var(--tp)'};text-decoration:${s.done?'line-through':'none'}">${s.label}</span>
+    </div>`).join('');
+  }
+  const inc=db.transactions.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const exp=db.transactions.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+  const aOrd=db.orders.filter(o=>o.status!=='Delivered').length;
+  const stats=[
+    {cls:'sg',ico:'fa-naira-sign',lbl:'Total Income',val:'₦'+fmt(inc),ch:'+₦'+fmt(db.transactions.filter(t=>t.type==='income'&&inMonth(t.date)).reduce((s,t)=>s+t.amount,0))+' this month',up:true},
+    {cls:'st',ico:'fa-receipt',lbl:'Active Orders',val:aOrd,ch:db.orders.filter(o=>o.status==='Pending').length+' pending'},
+    {cls:'sn',ico:'fa-users',lbl:'Total Clients',val:db.clients.length,ch:db.clients.length+' in records'},
+    {cls:'ss',ico:'fa-calendar-check',lbl:'Appointments',val:db.appointments.filter(a=>a.date>=today()).length,ch:db.appointments.filter(a=>a.date===today()).length+' today'},
+  ];
+  g('dStats').innerHTML=stats.map(s=>`<div class="scard ${s.cls}"><div class="sacc"></div><div class="sico"><i class="fas ${s.ico}"></i></div><div class="slbl">${s.lbl}</div><div class="sval">${s.val}</div><div class="sch ${s.up?'sup':''}">${s.up?'<i class="fas fa-arrow-trend-up"></i> ':''}<span style="color:var(--tm)">${s.ch}</span></div></div>`).join('');
+  // orders
+  const recOrd=db.orders.slice().reverse().slice(0,5);
+  g('dOrd').innerHTML=recOrd.length?recOrd.map(o=>`<tr><td><div class="cav"><div class="av" style="background:${sc(o.client)}">${ini(o.client)}</div><div>${o.client}</div></div></td><td>${o.style}</td><td>${fmtD(o.due)}</td><td style="font-family:'DM Mono',monospace">₦${fmt(o.amount)}</td><td>${sbadge(o.status)}</td></tr>`).join(''):'<tr><td colspan="5"><div style="text-align:center;padding:36px 20px;"><i class="fas fa-receipt" style="font-size:28px;color:rgba(10,14,26,.12);display:block;margin-bottom:10px;"></i><p style="font-size:13px;font-weight:600;color:var(--tm);margin-bottom:4px">No orders yet</p><p style="font-size:12px;color:var(--tl)">Click <strong>New Order</strong> in the Orders section to get started</p></div></td></tr>';
+  // today appts
+  const ta=db.appointments.filter(a=>a.date===today()).sort((a,b)=>a.time.localeCompare(b.time));
+  const ac={Fitting:'#8B5CF6',Measurement:'#D4A017',Pickup:'#4CAF50',Consultation:'#3B82F6'};
+  g('dAppts').innerHTML=ta.length?ta.map(a=>`<div class="ami"><div class="amitm"><strong>${fmtT(a.time)}</strong><span>today</span></div><div class="amivl" style="background:${ac[a.type]||'#ccc'}"></div><div class="aminm"><strong>${a.client}</strong><span>${a.type}</span></div></div>`).join(''):'<div style="text-align:center;padding:28px 16px"><i class="fas fa-calendar" style="font-size:24px;color:rgba(10,14,26,.1);display:block;margin-bottom:8px"></i><p style="font-size:12px;color:var(--tl)">No appointments today</p></div>';
+  // activity
+  const acts=bAct().slice(0,5);
+  g('dAct').innerHTML=acts.length?acts.map(a=>`<div class="ai"><div class="aico" style="background:${a.bg};color:${a.c}"><i class="fas ${a.ico}"></i></div><div style="flex:1"><strong>${a.title}</strong><span>${a.sub}</span></div><div class="aitm">${a.tm}</div></div>`).join(''):'<div style="text-align:center;padding:28px 16px"><i class="fas fa-clock" style="font-size:24px;color:rgba(10,14,26,.1);display:block;margin-bottom:8px"></i><p style="font-size:12px;color:var(--tl)">Activity will appear here as you use the app</p></div>';
+  // chart
+  rChart();
+}
+function bAct(){
+  const a=[];
+  db.orders.slice().reverse().slice(0,3).forEach(o=>a.push({ico:'fa-receipt',bg:'rgba(212,160,23,.1)',c:'var(--gold)',title:'Order: '+o.style,sub:o.client+' · ₦'+fmt(o.amount),tm:rel(o.ts)}));
+  db.clients.slice().reverse().slice(0,2).forEach(c=>a.push({ico:'fa-user-plus',bg:'rgba(139,92,246,.1)',c:'#8B5CF6',title:'New client: '+c.name,sub:c.cat+' · '+c.phone,tm:rel(c.ts)}));
+  db.appointments.slice().reverse().slice(0,2).forEach(ap=>a.push({ico:'fa-calendar-check',bg:'rgba(76,175,80,.1)',c:'#4CAF50',title:'Appointment booked',sub:ap.client+' · '+ap.type,tm:rel(ap.ts)}));
+  return a;
+}
+function rChart(){
+  const now=new Date(),mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const data=[];
+  for(let i=5;i>=0;i--){
+    const d=new Date(now.getFullYear(),now.getMonth()-i,1);
+    const ym=d.getFullYear()+'-'+(d.getMonth()+1).toString().padStart(2,'0');
+    const tot=db.transactions.filter(t=>t.type==='income'&&t.date.startsWith(ym)).reduce((s,t)=>s+t.amount,0);
+    data.push({lbl:mo[d.getMonth()],val:tot});
+  }
+  const mx=Math.max(...data.map(d=>d.val),1);
+  g('rChart').innerHTML=data.map((d,i)=>`<div class="cb" style="height:${Math.max((d.val/mx)*120,3)}px;background:${i===data.length-1?'linear-gradient(to top,var(--terra),var(--teral))':'linear-gradient(to top,var(--gold),var(--goldl))'};" title="${d.lbl}: ₦${fmt(d.val)}"></div>`).join('');
+  g('rMonths').innerHTML=data.map(d=>`<span>${d.lbl}</span>`).join('');
+  g('chartYr').textContent=now.getFullYear();
+}
+
+// ── ORDERS ────────────────────────────────────────────────────
+function rOrders(){
+  const sts=['All','Pending','In Progress','Fitting','Ready','Delivered'];
+  g('ordFilters').innerHTML=sts.map(s=>`<span class="fc${s===ordFlt?' on':''}" onclick="setOF('${s}')">${s} (${s==='All'?db.orders.length:db.orders.filter(o=>o.status===s).length})</span>`).join('');
+  const list=ordFlt==='All'?db.orders:db.orders.filter(o=>o.status===ordFlt);
+  const tb=g('ordBody'),em=g('ordEmpty');
+  if(!list.length){tb.innerHTML='';em.style.display='block';return;}
+  em.style.display='none';
+  tb.innerHTML=list.slice().reverse().map(o=>`<tr>
+    <td style="font-family:'DM Mono',monospace;color:var(--tm);font-size:10px">#${o.id}</td>
+    <td><div class="cav"><div class="av" style="background:${sc(o.client)}">${ini(o.client)}</div><div><div style="font-weight:600">${o.client}</div><div style="font-size:10px;color:var(--tm)">${o.phone}</div></div></div></td>
+    <td><div style="font-weight:600">${o.style}</div><div style="font-size:10px;color:var(--tm)">${o.fabric||''}</div></td>
+    <td style="font-size:11px">${o.assigned||'—'}</td>
+    <td style="font-size:11px">${fmtD(o.due)}</td>
+    <td style="font-family:'DM Mono',monospace">₦${fmt(o.amount)}</td>
+    <td style="font-family:'DM Mono',monospace;color:${o.deposit>=o.amount?'#15803D':o.deposit>0?'#D97706':'var(--terra)'}">₦${fmt(o.deposit)}</td>
+    <td>${sbadge(o.status)}</td>
+    <td><button class="ib" onclick="editOrd(${o.id})" title="Edit"><i class="fas fa-pen"></i></button>
+        <button class="ib" onclick="cycleOrd(${o.id})" title="Advance status"><i class="fas fa-arrow-right"></i></button>
+        <button class="ib del" onclick="delOrd(${o.id})" title="Delete"><i class="fas fa-trash"></i></button></td>
+  </tr>`).join('');
+  g('ordSub').textContent=db.orders.length+' total · '+db.orders.filter(o=>o.status!=='Delivered').length+' active';
+}
+function setOF(f){ordFlt=f;rOrders();}
+function openOrder(id){
+  clr('oC','oP','oS','oF','oA','oD','oDt','oN');
+  g('oW').innerHTML='<option value="">Unassigned</option>'+[...db.workers.map(w=>w.name),'Emmanuel Effiong'].map(n=>`<option>${n}</option>`).join('');
+  if(id){
+    const o=db.orders.find(x=>x.id===id);
+    if(o){sv({oC:o.client,oP:o.phone,oS:o.style,oF:o.fabric||'',oA:o.amount,oD:o.deposit,oDt:o.due,oN:o.notes||''});g('oW').value=o.assigned||'';g('orderModal').dataset.eid=id;}
+    g('omTitle').textContent='Edit Order';
+  }else{g('omTitle').textContent='New Order';delete g('orderModal').dataset.eid;}
+  openOverlay('orderModal');
+}
+function editOrd(id){openOrder(id);}
+function saveOrder(){
+  const c=v('oC'),s=v('oS'),a=parseFloat(v('oA'))||0;
+  if(!c||!s||!a){toast('Fill client, style & amount','exclamation-triangle');return;}
+  const eid=g('orderModal').dataset.eid;
+  const obj={client:c,phone:v('oP'),style:s,fabric:v('oF'),amount:a,deposit:parseFloat(v('oD'))||0,due:v('oDt'),assigned:g('oW').value,status:'Pending',notes:v('oN'),ts:Date.now()};
+  if(eid){
+    const idx=db.orders.findIndex(o=>o.id==eid);
+    if(idx!==-1){obj.id=parseInt(eid);obj.status=db.orders[idx].status;obj.ts=db.orders[idx].ts;db.orders[idx]=obj;}
+    toast('Order updated!');
+  }else{obj.id=nid++;db.orders.push(obj);toast('Order created! 🎉');}
+  closeOverlay('orderModal');rOrders();updBadges();rChart();saveDB();
+}
+function cycleOrd(id){
+  const fl=['Pending','In Progress','Fitting','Ready','Delivered'];
+  const o=db.orders.find(x=>x.id===id);if(!o)return;
+  o.status=fl[(fl.indexOf(o.status)+1)%fl.length];
+  toast('Status → '+o.status);rOrders();updBadges();
+}
+function delOrd(id){confirm2('Delete Order','This order will be permanently removed.',()=>{db.orders=db.orders.filter(o=>o.id!==id);saveDB();rOrders();updBadges();toast('Deleted','trash');});}
+function exportCSV(type){
+  let lines,fn;
+  if(type==='orders'){
+    lines=['#,Client,Phone,Style,Fabric,Amount,Deposit,Due,Status,Assigned,Notes',...db.orders.map(o=>`${o.id},"${o.client}","${o.phone}","${o.style}","${o.fabric||''}",${o.amount},${o.deposit},"${o.due}","${o.status}","${o.assigned||''}","${o.notes||''}"`)];fn='emmanuel-styles-orders.csv';
+  }else{
+    lines=['Date,Type,Category,Description,Amount',...db.transactions.map(t=>`"${t.date}","${t.type}","${t.cat}","${t.desc}",${t.amount}`)];fn='emmanuel-styles-finance.csv';
+  }
+  const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(lines.join('\n'));a.download=fn;a.click();
+  toast('Exported as '+fn,'download');
+}
+
+// ── GALLERY ───────────────────────────────────────────────────
+const GCATS=['All','Ankara','Aso-Oke','Adire','Kaftan','Bridal','Agbada','Senator','Accessories'];
+function rGallery(){
+  g('galFilters').innerHTML=GCATS.map(c=>`<span class="fc${c===galFlt?' on':''}" onclick="setGF('${c}')">${c}</span>`).join('');
+  const list=galFlt==='All'?db.gallery:db.gallery.filter(x=>x.cat===galFlt);
+  const gr=g('galGrid'),em=g('galEmpty');
+  if(!list.length){gr.innerHTML='';em.style.display='block';return;}
+  em.style.display='none';
+  gr.innerHTML=list.map(x=>`<div class="gi">
+    <div class="gimg">
+      <div class="gthumb ${x.pat}" style="display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2);font-size:50px"><i class="fas ${x.cat==='Agbada'||x.cat==='Senator'?'fa-person':'fa-person-dress'}"></i></div>
+      <div class="gchip">${x.cat}</div>
+      <button class="gdel" onclick="delGallery(event,${x.id})"><i class="fas fa-times"></i></button>
+      <div class="gov"><button class="gvbtn" onclick="viewGallery(${x.id})">View Details</button></div>
+    </div>
+    <div class="ginfo"><strong>${x.name}</strong><span>${x.occasion||x.cat}</span><div class="gfoot"><span class="ptag">₦${fmt(x.price)}</span><span style="font-size:10px;color:var(--tm)">⭐ 5.0</span></div></div>
+  </div>`).join('');
+}
+function setGF(f){galFlt=f;rGallery();}
+function saveGallery(){
+  const n=v('gN'),p=parseFloat(v('gPr'))||0;
+  if(!n||!p){toast('Fill name & price','exclamation-triangle');return;}
+  db.gallery.push({id:nid++,name:n,cat:g('gCt').value,price:p,occasion:v('gOc'),desc:v('gDs'),pat:PATS[Math.floor(Math.random()*PATS.length)],ts:Date.now()});
+  closeOverlay('galleryAddModal');rGallery();saveDB();toast('Design added! 🎨');
+}
+function viewGallery(id){
+  const x=db.gallery.find(i=>i.id===id);if(!x)return;
+  g('gvName').textContent=x.name;
+  g('gvThumb').className=x.pat;
+  g('gvThumb').style.cssText='height:180px;border-radius:11px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(255,255,255,.25)';
+  g('gvThumb').innerHTML=`<i class="fas ${x.cat==='Agbada'||x.cat==='Senator'?'fa-person':'fa-person-dress'}"></i>`;
+  g('gvCat').textContent=x.cat;g('gvPrice').textContent='₦'+fmt(x.price);
+  g('gvDesc').textContent=x.desc||'A beautiful '+x.cat+' piece from Emmanuel Styles, Aka Road, Uyo.';
+  g('galleryView').dataset.gid=id;openOverlay('galleryView');
+}
+function delGallery(e,id){e.stopPropagation();confirm2('Remove Design','Design will be removed from your gallery.',()=>{db.gallery=db.gallery.filter(x=>x.id!==id);saveDB();rGallery();toast('Removed','trash');});}
+function orderFromDesign(){
+  const x=db.gallery.find(i=>i.id==g('galleryView').dataset.gid);
+  closeOverlay('galleryView');
+  if(x){g('oS').value=x.name;g('oA').value=x.price;openOrder();}
+}
+
+// ── CLIENTS ───────────────────────────────────────────────────
+const CCATS=['All','Regular','VIP','Bridal','Corporate'];
+function rClients(){
+  g('clientFilters').innerHTML=CCATS.map(c=>`<span class="fc${c===cliFlt?' on':''}" onclick="setCF('${c}')">${c} (${c==='All'?db.clients.length:db.clients.filter(x=>x.cat===c).length})</span>`).join('');
+  const list=cliFlt==='All'?db.clients:db.clients.filter(c=>c.cat===cliFlt);
+  const gr=g('clientGrid'),em=g('clientEmpty');
+  if(!list.length){gr.innerHTML='';em.style.display='block';return;}
+  em.style.display='none';
+  gr.innerHTML=list.map(c=>`<div class="ccard">
+    <div class="ccop">
+      <div class="ccav" style="background:${sc(c.name)}">${ini(c.name)}</div>
+      <div style="flex:1"><div class="ccname">${c.name}</div><div class="ccph"><i class="fas fa-phone"></i>${c.phone}</div></div>
+      <span class="sb2 ${c.cat==='VIP'?'sv':c.cat==='Bridal'?'sf':'sr'}">${c.cat}</span>
+    </div>
+    <div class="mgrid">
+      ${[['Bust',c.bust],['Waist',c.waist],['Hip',c.hip],['Height',c.height],['Shoulder',c.shoulder],['Sleeve',c.sleeve]].map(([l,vl])=>`<div class="mc"><label>${l}</label><span>${vl||'—'}</span></div>`).join('')}
+    </div>
+    <div class="ccbtns">
+      <button class="ccbtn ccb1" onclick="seeClientOrders('${c.name}')"><i class="fas fa-receipt"></i> Orders (${db.orders.filter(o=>o.client===c.name).length})</button>
+      <button class="ccbtn ccb2" onclick="editClient(${c.id})"><i class="fas fa-ruler"></i> Edit</button>
+      <button class="ccbtn" style="background:#FEF2F2;color:#DC2626;border:1px solid rgba(220,38,38,.15);cursor:pointer" onclick="delClient(${c.id})"><i class="fas fa-trash"></i></button>
+    </div>
+  </div>`).join('');
+  g('clientSub').textContent=db.clients.length+' clients · measurements on record';
+}
+function setCF(f){cliFlt=f;rClients();}
+function openClient(id){
+  clr('cN','cP','cE','mB','mW','mH','mHt','mSh','mSl');
+  g('cmTitle').textContent=id?'Edit Client':'Add Client';
+  if(id){
+    const c=db.clients.find(x=>x.id===id);
+    if(c){sv({cN:c.name,cP:c.phone,cE:c.email||'',mB:c.bust||'',mW:c.waist||'',mH:c.hip||'',mHt:c.height||'',mSh:c.shoulder||'',mSl:c.sleeve||''});g('cCt').value=c.cat;g('clientModal').dataset.eid=id;}
+  }else delete g('clientModal').dataset.eid;
+  openOverlay('clientModal');
+}
+function editClient(id){openClient(id);}
+function saveClient(){
+  const n=v('cN'),p=v('cP');
+  if(!n||!p){toast('Name and phone required','exclamation-triangle');return;}
+  const eid=g('clientModal').dataset.eid;
+  const obj={name:n,phone:p,email:v('cE'),cat:g('cCt').value,bust:v('mB'),waist:v('mW'),hip:v('mH'),height:v('mHt'),shoulder:v('mSh'),sleeve:v('mSl'),ts:Date.now()};
+  if(eid){const idx=db.clients.findIndex(c=>c.id==eid);if(idx!==-1){obj.id=parseInt(eid);obj.ts=db.clients[idx].ts;db.clients[idx]=obj;}toast('Client updated!');}
+  else{obj.id=nid++;db.clients.push(obj);toast('Client added! 👤');}
+  closeOverlay('clientModal');rClients();updBadges();saveDB();
+}
+function delClient(id){confirm2('Delete Client','All data for this client will be removed.',()=>{db.clients=db.clients.filter(c=>c.id!==id);saveDB();rClients();toast('Deleted','trash');});}
+function seeClientOrders(name){nav('orders',null);}
+
+// ── APPOINTMENTS ──────────────────────────────────────────────
+const ATYPS=['All','Today','Fitting','Measurement','Pickup','Consultation'];
+function rAppts(){
+  g('apptFilters').innerHTML=ATYPS.map(t=>`<span class="fc${t===apFlt?' on':''}" onclick="setAF('${t}')">${t}</span>`).join('');
+  let list=db.appointments.slice().sort((a,b)=>a.date.localeCompare(b.date)||a.time.localeCompare(b.time));
+  if(apFlt==='Today')list=list.filter(a=>a.date===today());
+  else if(apFlt!=='All')list=list.filter(a=>a.type===apFlt);
+  const el=g('apptList'),em=g('apptEmpty');
+  const ac={Fitting:'#8B5CF6',Measurement:'#D4A017',Pickup:'#4CAF50',Consultation:'#3B82F6'};
+  if(!list.length){el.innerHTML='';em.style.display='block';}
+  else{em.style.display='none';el.innerHTML=list.map(a=>`<div class="apcard">
+    <div class="aptbg"><strong>${fmtT(a.time)}</strong><span>${a.date===today()?'TODAY':fmtD(a.date)}</span></div>
+    <div class="apvl" style="background:${ac[a.type]||'#ccc'}"></div>
+    <div class="apdet"><strong>${a.client}</strong><span>${a.notes||a.phone||''}</span><div class="aptag ${apCls(a.type)}">${a.type}</div></div>
+    <button class="ib del" onclick="delAppt(${a.id})"><i class="fas fa-trash"></i></button>
+  </div>`).join('');}
+  const wk=db.appointments.filter(a=>a.date>=today());
+  g('apSF').textContent=wk.filter(a=>a.type==='Fitting').length;
+  g('apSM').textContent=wk.filter(a=>a.type==='Measurement').length;
+  g('apSP').textContent=wk.filter(a=>a.type==='Pickup').length;
+  g('apptSub').textContent=db.appointments.length+' total · '+db.appointments.filter(a=>a.date===today()).length+' today';
+}
+function setAF(f){apFlt=f;rAppts();}
+function quickAppt(type){g('apTy').value=type;g('apDt').value=today();openOverlay('apptModal');}
+function saveAppt(){
+  const c=v('apC'),dt=v('apDt'),tm=v('apTm');
+  if(!c||!dt||!tm){toast('Client, date & time required','exclamation-triangle');return;}
+  db.appointments.push({id:nid++,client:c,phone:v('apP'),date:dt,time:tm,type:g('apTy').value,notes:v('apN'),ts:Date.now()});
+  closeOverlay('apptModal');rAppts();updBadges();saveDB();toast('Appointment booked! 📅');
+}
+function delAppt(id){confirm2('Cancel Appointment','This appointment will be removed.',()=>{db.appointments=db.appointments.filter(a=>a.id!==id);saveDB();rAppts();updBadges();toast('Cancelled','trash');});}
+
+// ── WORKERS ───────────────────────────────────────────────────
+function rWorkers(){
+  const gr=g('workerGrid'),em=g('workerEmpty');
+  if(!db.workers.length){gr.innerHTML='';em.style.display='block';return;}
+  em.style.display='none';
+  gr.innerHTML=db.workers.map(w=>`<div class="wcard">
+    <div class="wav" style="background:${sc(w.name)}">${ini(w.name)}</div>
+    <h4>${w.name}</h4>
+    <div class="wroletxt"><i class="fas ${w.role==='Worker'?'fa-scissors':'fa-graduation-cap'}"></i>${w.role}</div>
+    <div class="wstats"><div class="wsv"><strong>${w.jobs}</strong><span>Jobs</span></div><div class="wsv"><strong>${w.rating}</strong><span>Rating</span></div></div>
+    <div class="stags">${(w.spec||'').split(',').map(s=>`<span class="stag">${s.trim()}</span>`).join('')}</div>
+    <div style="display:flex;gap:6px">
+      <button class="ccbtn ccb2" style="flex:1;padding:7px;font-size:11px" onclick="editWorker(${w.id})"><i class="fas fa-pen"></i> Edit</button>
+      <button class="ccbtn" style="background:#FEF2F2;color:#DC2626;padding:7px 9px;border-radius:7px;border:1px solid rgba(220,38,38,.15);cursor:pointer" onclick="delWorker(${w.id})"><i class="fas fa-trash"></i></button>
+    </div>
+  </div>`).join('');
+  g('workerSub').textContent=db.workers.length+' members · '+db.workers.filter(w=>w.role==='Worker').length+' workers, '+db.workers.filter(w=>w.role==='Apprentice').length+' apprentices';
+}
+function editWorker(id){
+  const w=db.workers.find(x=>x.id===id);if(!w)return;
+  sv({wN:w.name,wP:w.phone,wSp:w.spec,wE:w.email||'',wSt:w.start||''});
+  g('wR').value=w.role;g('workerModal').dataset.eid=id;openOverlay('workerModal');
+}
+function saveWorker(){
+  const n=v('wN'),p=v('wP');
+  if(!n||!p){toast('Name and phone required','exclamation-triangle');return;}
+  const eid=g('workerModal').dataset.eid;
+  const obj={name:n,phone:p,role:g('wR').value,spec:v('wSp'),email:v('wE'),start:v('wSt'),jobs:0,rating:0};
+  if(eid){const idx=db.workers.findIndex(w=>w.id==eid);if(idx!==-1){obj.id=parseInt(eid);obj.jobs=db.workers[idx].jobs;obj.rating=db.workers[idx].rating;db.workers[idx]=obj;}toast('Updated!');}
+  else{obj.id=nid++;db.workers.push(obj);toast('Team member added! ✂️');}
+  delete g('workerModal').dataset.eid;closeOverlay('workerModal');rWorkers();saveDB();
+}
+function delWorker(id){confirm2('Remove Member','This person will be removed from your team.',()=>{db.workers=db.workers.filter(w=>w.id!==id);saveDB();rWorkers();toast('Removed','trash');});}
+
+// ── INVENTORY ─────────────────────────────────────────────────
+function rInv(){
+  const it=db.inventory,tv=it.reduce((s,i)=>s+i.price*i.qty,0),lw=it.filter(i=>i.qty<=3).length;
+  g('invStats').innerHTML=`
+    <div class="scard sg"><div class="sacc"></div><div class="sico"><i class="fas fa-boxes-stacked"></i></div><div class="slbl">Total Items</div><div class="sval">${it.length}</div></div>
+    <div class="scard st"><div class="sacc"></div><div class="sico"><i class="fas fa-triangle-exclamation"></i></div><div class="slbl">Low Stock</div><div class="sval">${lw}</div><div class="sch ${lw?'':'sup'}">${lw?'Needs reorder':'All stocked'}</div></div>
+    <div class="scard sn"><div class="sacc"></div><div class="sico"><i class="fas fa-naira-sign"></i></div><div class="slbl">Stock Value</div><div class="sval">₦${fmt(tv)}</div></div>`;
+  const tb=g('invBody'),em=g('invEmpty');
+  if(!it.length){tb.innerHTML='';em.style.display='block';return;}
+  em.style.display='none';
+  tb.innerHTML=it.map(i=>{
+    const mx=50,pct=Math.min((i.qty/mx)*100,100),low=i.qty<=3;
+    return`<tr>
+      <td><span class="sw" style="background:${i.color||'#ccc'}"></span><strong>${i.name}</strong></td>
+      <td>${i.type}</td><td style="font-family:'DM Mono',monospace">${i.qty} ${i.unit}</td>
+      <td><div class="sbar"><div class="sbt"><div class="sbf" style="width:${pct}%;background:${low?'var(--terra)':'var(--gold)'}"></div></div><span style="font-size:10px;color:${low?'var(--terra)':'var(--tm)'}">${Math.round(pct)}%</span></div></td>
+      <td style="font-family:'DM Mono',monospace">₦${fmt(i.price)}/${i.unit.replace(/s$/,'')}</td>
+      <td style="font-size:11px">${i.supplier}</td>
+      <td><span class="sb2 ${low?'slow':'sstock'}">${low?'Low Stock':'In Stock'}</span></td>
+      <td><button class="ib" onclick="editInv(${i.id})"><i class="fas fa-pen"></i></button>
+          <button class="ib" onclick="restockInv(${i.id})" title="Restock"><i class="fas fa-plus"></i></button>
+          <button class="ib del" onclick="delInv(${i.id})"><i class="fas fa-trash"></i></button></td>
+    </tr>`;
+  }).join('');
+  g('invSub').textContent=it.length+' items · ₦'+fmt(tv)+' total value';
+}
+function editInv(id){
+  const i=db.inventory.find(x=>x.id===id);if(!i)return;
+  sv({iN:i.name,iQ:i.qty,iP:i.price,iSup:i.supplier});
+  g('iTy').value=i.type;g('iU').value=i.unit;g('iCol').value=i.color||'#D4A017';
+  g('invModal').dataset.eid=id;openOverlay('invModal');
+}
+function saveInv(){
+  const n=v('iN'),q=parseFloat(v('iQ'))||0;
+  if(!n){toast('Material name required','exclamation-triangle');return;}
+  const eid=g('invModal').dataset.eid;
+  const obj={name:n,type:g('iTy').value,qty:q,unit:g('iU').value,price:parseFloat(v('iP'))||0,supplier:v('iSup'),color:g('iCol').value,ts:Date.now()};
+  if(eid){const idx=db.inventory.findIndex(i=>i.id==eid);if(idx!==-1){obj.id=parseInt(eid);obj.ts=db.inventory[idx].ts;db.inventory[idx]=obj;}toast('Stock updated!');}
+  else{obj.id=nid++;db.inventory.push(obj);toast('Stock added! 📦');}
+  delete g('invModal').dataset.eid;closeOverlay('invModal');rInv();saveDB();
+}
+function restockInv(id){
+  const i=db.inventory.find(x=>x.id===id);if(!i)return;
+  // Open the edit modal pre-filled so user can update qty
+  editInv(id);
+  toast('Update the quantity field to restock this item');
+}
+function delInv(id){confirm2('Delete Stock Item','Item will be permanently removed.',()=>{db.inventory=db.inventory.filter(i=>i.id!==id);saveDB();rInv();toast('Deleted','trash');});}
+
+// ── FINANCE ───────────────────────────────────────────────────
+function rFinance(){
+  const inc=db.transactions.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const exp=db.transactions.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+  const pft=inc-exp;
+  g('finCards').innerHTML=`
+    <div class="fcard"><label>Total Income</label><div class="famt" style="color:#15803D">₦${fmt(inc)}</div><div class="sch sup" style="margin-top:4px"><i class="fas fa-arrow-trend-up"></i> All time</div></div>
+    <div class="fcard"><label>Total Expenses</label><div class="famt" style="color:var(--terra)">₦${fmt(exp)}</div><div class="sch" style="margin-top:4px"><i class="fas fa-minus" style="color:var(--terra)"></i> All time</div></div>
+    <div class="fcard"><label>Net Profit</label><div class="famt" style="color:var(--navy)">₦${fmt(pft)}</div><div class="sch" style="color:var(--tm);margin-top:4px">${inc>0?Math.round((pft/inc)*100)+'% margin':'—'}</div></div>`;
+  const cats={};db.transactions.filter(t=>t.type==='income').forEach(t=>{cats[t.cat]=(cats[t.cat]||0)+t.amount;});
+  const mx=Math.max(...Object.values(cats),1);
+  g('finBrk').innerHTML=Object.keys(cats).length?Object.entries(cats).map(([k,val])=>`<div class="brow"><div class="blbl">${k}</div><div class="btr"><div class="bfill" style="width:${(val/mx)*100}%;background:var(--gold)"></div></div><div class="bval">₦${fmt(val)}</div></div>`).join(''):'<p style="color:var(--tm);font-size:12px">No income yet</p>';
+  const tl=g('txList'),em=g('txEmpty');
+  if(!db.transactions.length){tl.innerHTML='';em.style.display='block';return;}
+  em.style.display='none';
+  tl.innerHTML=db.transactions.slice().reverse().map(t=>`<div class="txrow">
+    <div style="width:30px;height:30px;border-radius:7px;background:${t.type==='income'?'rgba(76,175,80,.1)':'rgba(196,98,45,.1)'};display:flex;align-items:center;justify-content:center;margin-right:11px;flex-shrink:0">
+      <i class="fas ${t.type==='income'?'fa-arrow-down':'fa-arrow-up'}" style="color:${t.type==='income'?'#15803D':'var(--terra)'};font-size:12px"></i>
+    </div>
+    <div class="txi"><strong>${t.desc}</strong><span>${t.cat} · ${fmtD(t.date)}</span></div>
+    <div class="txamt ${t.type==='income'?'txin':'txout'}">${t.type==='income'?'+':'−'}₦${fmt(t.amount)}</div>
+    <button class="ib del" onclick="delTx(${t.id})" style="margin-left:7px"><i class="fas fa-trash"></i></button>
+  </div>`).join('');
+}
+function saveTx(){
+  const desc=v('txD'),amt=parseFloat(v('txA'))||0;
+  if(!desc||!amt){toast('Description & amount required','exclamation-triangle');return;}
+  const type=document.querySelector('input[name="txT"]:checked').value;
+  db.transactions.push({id:nid++,type,desc,cat:g('txC').value,amount:amt,date:v('txDt')||today()});
+  closeOverlay('txModal');rFinance();rChart();saveDB();toast((type==='income'?'Income':'Expense')+' recorded! 💰');
+}
+function delTx(id){confirm2('Delete Transaction','Record will be permanently removed.',()=>{db.transactions=db.transactions.filter(t=>t.id!==id);saveDB();rFinance();rChart();toast('Deleted','trash');});}
+function clearAllTx(){confirm2('Clear All Transactions','All transaction records will be deleted.',()=>{db.transactions=[];saveDB();rFinance();rChart();toast('Cleared','trash');});}
+
+// ── MESSAGES ──────────────────────────────────────────────────
+function rMsgs(){
+  rMsgList();
+  if(db.msgs.length>0)openThread(activeThread||db.msgs[0].id);
+  else{
+    g('chAv').textContent='?';g('chAv').style.background='rgba(10,14,26,.08)';
+    g('chNm').textContent='No conversations yet';g('chRl').textContent='';
+    g('chBody').innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--tl);gap:10px;padding:30px"><i class="fas fa-comments" style="font-size:32px;opacity:.2"></i><p style="font-size:13px;text-align:center">Start a conversation by clicking <strong style=\"color:var(--navy)\">New Message</strong></p></div>';
+  }
+}
+function rMsgList(filter=''){
+  const threads=filter?db.msgs.filter(t=>t.name.toLowerCase().includes(filter.toLowerCase())):db.msgs;
+  g('mThreads').innerHTML=threads.map(t=>`<div class="mti ${t.id===activeThread?'on':''}" onclick="openThread(${t.id})">
+    <div class="mtav" style="background:${t.color}">${ini(t.name)}</div>
+    <div style="flex:1;min-width:0"><span class="mtnm">${t.name}</span><span class="mtpr">${(t.chat[t.chat.length-1]||{}).t||''}</span></div>
+    <div class="mtmeta"><div class="mttm">${(t.chat[t.chat.length-1]||{}).time||''}</div>${t.unread>0?`<div class="mun">${t.unread}</div>`:''}</div>
+  </div>`).join('');
+}
+function openThread(id){
+  activeThread=id;
+  const t=db.msgs.find(x=>x.id===id);if(!t)return;
+  t.unread=0;
+  g('chAv').textContent=ini(t.name);g('chAv').style.background=t.color||'#888';
+  g('chNm').textContent=t.name;g('chRl').textContent=t.role||'';
+  g('chBody').innerHTML=t.chat.map(m=>`<div><div class="bbl ${m.f==='me'?'bout':'bin'}">${m.t}</div><div class="${m.f==='me'?'btmo':'btm'}">${m.time}</div></div>`).join('');
+  g('chBody').scrollTop=g('chBody').scrollHeight;
+  rMsgList();
+}
+function sendMsg(){
+  const input=g('msgIn'),text=input.value.trim();if(!text)return;
+  const t=db.msgs.find(x=>x.id===activeThread);if(!t)return;
+  const now=new Date(),tm=now.getHours()+':'+now.getMinutes().toString().padStart(2,'0');
+  t.chat.push({f:'me',t:text,time:tm});input.value='';openThread(activeThread);
+  const replies=['Ok, understood!','Thank you Emmanuel!','I will be there.','Alright, see you soon!','God bless you sir/ma.','Ok thanks, I appreciate it.','Noted sir!'];
+  setTimeout(()=>{t.chat.push({f:'them',t:replies[Math.floor(Math.random()*replies.length)],time:tm});if(activeThread===t.id)openThread(t.id);else{t.unread++;rMsgList();}},1400);
+}
+function filterConvs(q){rMsgList(q);}
+function newConv(){
+  const name=prompt('Enter client or worker name:');if(!name)return;
+  const ex=db.msgs.find(t=>t.name.toLowerCase()===name.toLowerCase());
+  if(ex){openThread(ex.id);toast('Opened conversation with '+name);}
+  else{const id=nid++;db.msgs.unshift({id,name,role:'Client',color:sc(name),unread:0,chat:[]});activeThread=id;rMsgs();toast('New conversation started with '+name);}
+}
+
+// ── SEARCH ────────────────────────────────────────────────────
+function gSearch(q){
+  if(!q||q.length<2)return;
+  const ords=db.orders.filter(o=>o.client.toLowerCase().includes(q.toLowerCase())||o.style.toLowerCase().includes(q.toLowerCase()));
+  const cls=db.clients.filter(c=>c.name.toLowerCase().includes(q.toLowerCase()));
+  if(ords.length)toast('Found: '+ords[0].style+' — '+ords[0].client);
+  else if(cls.length)toast('Found client: '+cls[0].name+' · '+cls[0].phone);
+}
+
+// ── FAB ───────────────────────────────────────────────────────
+function fabAct(){
+  const pid=document.querySelector('.page.on')?.id||'';
+  if(pid==='page-orders')openOrder();
+  else if(pid==='page-clients')openClient();
+  else if(pid==='page-appointments')openOverlay('apptModal');
+  else if(pid==='page-workers')openOverlay('workerModal');
+  else if(pid==='page-inventory')openOverlay('invModal');
+  else if(pid==='page-finance')openOverlay('txModal');
+  else if(pid==='page-gallery')openOverlay('galleryAddModal');
+  else if(pid==='page-messages')newConv();
+  else toast('Use the sidebar menu to navigate');
+}
+
+// ── TOAST ─────────────────────────────────────────────────────
+let _tt;
+function toast(msg,ico='check'){
+  g('toastTxt').textContent=msg;g('toastIco').className='fas fa-'+ico;
+  const t=g('toastEl');t.classList.add('on');clearTimeout(_tt);
+  _tt=setTimeout(()=>t.classList.remove('on'),3000);
+}
+
+// ── BOOT ──────────────────────────────────────────────────────
+window.onload=()=>{
+  g('apDt').value=today();g('txDt').value=today();
+  // Always show landing first — user must log in
+  g('landing').style.display='flex';
+  g('app').style.display='none';
+};
+
+function setBN(i){document.querySelectorAll('.bni').forEach((b,j)=>b.classList.toggle('on',j===i));}
+
+</script>
+
+<!-- PWA Install Banner -->
+<div id="installBanner" style="display:none;position:fixed;bottom:72px;left:12px;right:12px;background:var(--navy);border-radius:13px;padding:13px 15px;box-shadow:var(--shl);z-index:500;align-items:center;gap:11px;border:1px solid rgba(212,160,23,.22);">
+  <div style="width:38px;height:38px;background:linear-gradient(135deg,var(--gold),var(--goldl));border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;color:var(--navy);font-size:16px;flex-shrink:0;">E</div>
+  <div style="flex:1;"><strong style="font-size:12px;color:white;display:block;">Install Emmanuel Styles</strong><span style="font-size:11px;color:rgba(255,255,255,.48);">Add to your phone home screen</span></div>
+  <button onclick="installPWA()" style="background:var(--gold);color:var(--navy);border:none;padding:7px 13px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;">Install</button>
+  <button onclick="dismissInstall()" style="background:none;border:none;color:rgba(255,255,255,.38);cursor:pointer;font-size:16px;padding:2px 4px;">✕</button>
+</div>
+
+
+<!-- Bottom Navigation (mobile) -->
+<div id="bnav" style="display:none;position:fixed;bottom:0;left:0;right:0;height:56px;background:var(--navy);z-index:300;flex-direction:row;align-items:center;justify-content:space-around;border-top:1px solid rgba(212,160,23,.13);">
+  <button class="bni on" id="bn0" onclick="nav('dashboard',null);setBN(0)"><i class="fas fa-th-large"></i><span>Home</span></button>
+  <button class="bni" id="bn1" onclick="nav('orders',null);setBN(1)"><i class="fas fa-receipt"></i><span>Orders</span></button>
+  <button class="bni" id="bn2" onclick="nav('gallery',null);setBN(2)"><i class="fas fa-images"></i><span>Gallery</span></button>
+  <button class="bni" id="bn3" onclick="nav('clients',null);setBN(3)"><i class="fas fa-users"></i><span>Clients</span></button>
+  <button class="bni" id="bn4" onclick="nav('appointments',null);setBN(4)"><i class="fas fa-calendar-check"></i><span>Schedule</span></button>
+</div>
+
+
+<script>
+// Service Worker — enables offline use and home screen install
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+// PWA install prompt
+let _deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  _deferredPrompt = e;
+  const b = document.getElementById('installBanner');
+  if (b && !sessionStorage.getItem('pwa-dismissed')) {
+    setTimeout(() => b.style.display = 'flex', 2500);
+  }
+});
+function installPWA() {
+  const b = document.getElementById('installBanner');
+  if (_deferredPrompt) {
+    _deferredPrompt.prompt();
+    _deferredPrompt.userChoice.then(c => {
+      if (c.outcome === 'accepted') { if(b) b.style.display='none'; toast('App installed! Check your home screen'); }
+      _deferredPrompt = null;
+    });
+  } else {
+    toast('Tap Share → Add to Home Screen to install on iPhone');
+    if(b) b.style.display='none';
+  }
+}
+function dismissInstall() {
+  const b = document.getElementById('installBanner');
+  if(b) b.style.display='none';
+  sessionStorage.setItem('pwa-dismissed','1');
+}
+window.addEventListener('appinstalled', () => toast('Emmanuel Styles installed!'));
+</script>
+
+</body>
+</html>
